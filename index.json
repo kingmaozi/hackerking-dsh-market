@@ -1,0 +1,1228 @@
+{
+  "format": 1,
+  "title": {
+    "en": "HackerKing Reverse Engineering Market",
+    "zh": "HackerKing 逆向破解市场"
+  },
+  "description": {
+    "en": "DSH plugins for reverse engineering, cracking and evidence-driven delivery, plus desktop automation, research, image generation and the ArtCraft document suite. Git-source only: no registry needed.",
+    "zh": "DSH 插件市场：逆向破解技能、MCP 接线、破解工作台与证据报告，外加桌面操作、全网调研、本机生图与 ArtCraft 文档套件。纯 git 源发布，不依赖 npm registry。"
+  },
+  "metadata": {
+    "categories": {
+      "reverse-engineering": {
+        "title": {
+          "en": "Reverse Engineering",
+          "zh": "逆向工程"
+        }
+      },
+      "toolchain": {
+        "title": {
+          "en": "Toolchain",
+          "zh": "工具链"
+        }
+      },
+      "development": {
+        "title": {
+          "en": "Development",
+          "zh": "开发工作流"
+        }
+      },
+      "productivity": {
+        "title": {
+          "en": "Productivity",
+          "zh": "生产力"
+        }
+      }
+    },
+    "labels": {
+      "skills": {
+        "title": {
+          "en": "Skills",
+          "zh": "技能"
+        }
+      },
+      "mcp": {
+        "title": {
+          "en": "MCP",
+          "zh": "MCP"
+        }
+      },
+      "routing": {
+        "title": {
+          "en": "Routing",
+          "zh": "路由"
+        }
+      },
+      "workflow": {
+        "title": {
+          "en": "Workflow",
+          "zh": "工作流"
+        }
+      },
+      "setup": {
+        "title": {
+          "en": "Setup",
+          "zh": "安装配置"
+        }
+      },
+      "media": {
+        "title": {
+          "en": "Media",
+          "zh": "图像"
+        }
+      },
+      "research": {
+        "title": {
+          "en": "Research",
+          "zh": "调研"
+        }
+      },
+      "desktop": {
+        "title": {
+          "en": "Desktop",
+          "zh": "桌面"
+        }
+      },
+      "craft": {
+        "title": {
+          "en": "Craft Suite",
+          "zh": "创作套件"
+        }
+      },
+      "tools": {
+        "title": {
+          "en": "Tools",
+          "zh": "工具"
+        }
+      }
+    },
+    "sortKeys": {}
+  },
+  "plugins": [
+    {
+      "name": "agent-reach",
+      "title": {
+        "en": "Agent Reach Research",
+        "zh": "全网调研 Agent Reach"
+      },
+      "description": {
+        "en": "Three-tier web research ported from ZCode: fast / wide / deep over reach_* MCP channels (Tavily, Exa, Jina, Parallel, TinyFish, Firecrawl, Valyu) with evidence IDs, counter-evidence and gap accounting.",
+        "zh": "从 ZCode 移植的三档全网调研：fast / wide / deep，走 reach_* MCP 渠道（Tavily、Exa、Jina、Parallel、TinyFish、Firecrawl、Valyu），自带证据 ID、反例与缺口说明。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiMyMmQzZWUiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzIyZDNlZSI+QVI8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/agent-reach",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/agent-reach"
+      },
+      "metadata": {
+        "category": "productivity",
+        "keywords": [
+          "research",
+          "search",
+          "tavily",
+          "exa",
+          "jina",
+          "parallel",
+          "tinyfish",
+          "firecrawl",
+          "valyu",
+          "mcp",
+          "skills"
+        ],
+        "labels": [
+          "skills",
+          "mcp",
+          "research"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/agent-reach"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "computer-use",
+      "title": {
+        "en": "Computer Use (native cua_*)",
+        "zh": "桌面操作 cua_*（原生）"
+      },
+      "description": {
+        "en": "macOS computer-use tools for DSH: cua_screenshot / cua_windows / cua_click / cua_type / cua_key / cua_scroll / cua_drag, backed by screencapture, cliclick, osascript and pyobjc.",
+        "zh": "macOS 桌面操作工具：cua_* 系列（截屏、窗口枚举、点击、移动、输入、按键、滚动、拖拽），后端只用 screencapture + cliclick + osascript + pyobjc。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmYjcxODUiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZiNzE4NSI+Q1U8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/computer-use",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/computer-use"
+      },
+      "metadata": {
+        "category": "toolchain",
+        "keywords": [
+          "computer-use",
+          "macos",
+          "accessibility",
+          "screenshot",
+          "desktop-automation",
+          "cua"
+        ],
+        "labels": [
+          "tools",
+          "desktop"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/computer-use"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "crack-lab",
+      "title": {
+        "en": "Crack Lab",
+        "zh": "破解工作台"
+      },
+      "description": {
+        "en": "Seven-stage cracking workbench: intake, license patch, keygen, APK, unpacking and evidence report.",
+        "zh": "七阶段破解工作台：接单建档、授权补丁、注册机、APK、脱壳与证据报告。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzExMTgyNyIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmNTllMGIiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2Y1OWUwYiI+Q0w8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/crack-lab",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/crack-lab"
+      },
+      "metadata": {
+        "category": "reverse-engineering",
+        "keywords": [
+          "cracking",
+          "keygen",
+          "binary-patch",
+          "apk",
+          "unpack",
+          "report"
+        ],
+        "labels": [
+          "skills",
+          "workflow"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.2.0",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/crack-lab"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-artcraft-plugin-cadcraft",
+      "title": {
+        "en": "CADCraft for DSH",
+        "zh": "CADCraft CAD drafting工作台"
+      },
+      "description": {
+        "en": "CAD drafting: entities, layers, dimensions and dxf/dwg/svg conversion, driven headlessly from a DSH plugin over the app's own CLI and MCP server.",
+        "zh": "CAD 绘图：实体、图层、尺寸标注与 dxf/dwg/svg 转换（cadcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzMzQxNTUiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzMzNDE1NSI+Q0Q8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/dsh-artcraft-plugin-cadcraft",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/dsh-artcraft-plugin-cadcraft"
+      },
+      "metadata": {
+        "category": "productivity",
+        "keywords": [
+          "cadcraft",
+          "artcraft",
+          "craft",
+          "document",
+          "tools",
+          "mcp",
+          "dsh-plugin"
+        ],
+        "labels": [
+          "tools",
+          "craft"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.3",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/dsh-artcraft-plugin-cadcraft"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-artcraft-plugin-deckcraft",
+      "title": {
+        "en": "DeckCraft for DSH",
+        "zh": "DeckCraft Presentations工作台"
+      },
+      "description": {
+        "en": "Presentations: slides, layouts, notes and pptx read/write, driven headlessly from a DSH plugin over the app's own CLI and MCP server.",
+        "zh": "演示文稿：幻灯片、版式、备注与 pptx 读写（deckcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiNhMjFjYWYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2EyMWNhZiI+REs8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/dsh-artcraft-plugin-deckcraft",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/dsh-artcraft-plugin-deckcraft"
+      },
+      "metadata": {
+        "category": "productivity",
+        "keywords": [
+          "deckcraft",
+          "artcraft",
+          "craft",
+          "document",
+          "tools",
+          "mcp",
+          "dsh-plugin"
+        ],
+        "labels": [
+          "tools",
+          "craft"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.3",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/dsh-artcraft-plugin-deckcraft"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-artcraft-plugin-designcraft",
+      "title": {
+        "en": "DesignCraft for DSH",
+        "zh": "DesignCraft Page layout工作台"
+      },
+      "description": {
+        "en": "Page layout: artboards, masters, text/image flow and print export, driven headlessly from a DSH plugin over the app's own CLI and MCP server.",
+        "zh": "页面排版：画板、母版、图文混排与印刷导出（designcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiMwZjc2NmUiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzBmNzY2ZSI+REM8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/dsh-artcraft-plugin-designcraft",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/dsh-artcraft-plugin-designcraft"
+      },
+      "metadata": {
+        "category": "productivity",
+        "keywords": [
+          "designcraft",
+          "artcraft",
+          "craft",
+          "document",
+          "tools",
+          "mcp",
+          "dsh-plugin"
+        ],
+        "labels": [
+          "tools",
+          "craft"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.3",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/dsh-artcraft-plugin-designcraft"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-artcraft-plugin-effectcraft",
+      "title": {
+        "en": "EffectCraft for DSH",
+        "zh": "EffectCraft Motion graphics工作台"
+      },
+      "description": {
+        "en": "Motion graphics: comps, keyframes, effects and render, driven headlessly from a DSH plugin over the app's own CLI and MCP server.",
+        "zh": "动效合成：合成、关键帧、特效与渲染（effectcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiM5ZDE3NGQiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzlkMTc0ZCI+RUY8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/dsh-artcraft-plugin-effectcraft",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/dsh-artcraft-plugin-effectcraft"
+      },
+      "metadata": {
+        "category": "productivity",
+        "keywords": [
+          "effectcraft",
+          "artcraft",
+          "craft",
+          "document",
+          "tools",
+          "mcp",
+          "dsh-plugin"
+        ],
+        "labels": [
+          "tools",
+          "craft"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.3",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/dsh-artcraft-plugin-effectcraft"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-artcraft-plugin-filmcraft",
+      "title": {
+        "en": "FilmCraft for DSH",
+        "zh": "FilmCraft Video editing工作台"
+      },
+      "description": {
+        "en": "Non-linear editing: timeline, transitions, multicam and transcode, driven headlessly from a DSH plugin over the app's own CLI and MCP server.",
+        "zh": "非线性剪辑：时间线、转场、多机位与转码（filmcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiM0MzM4Y2EiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzQzMzhjYSI+RkM8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/dsh-artcraft-plugin-filmcraft",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/dsh-artcraft-plugin-filmcraft"
+      },
+      "metadata": {
+        "category": "productivity",
+        "keywords": [
+          "filmcraft",
+          "artcraft",
+          "craft",
+          "document",
+          "tools",
+          "mcp",
+          "dsh-plugin"
+        ],
+        "labels": [
+          "tools",
+          "craft"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.3",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/dsh-artcraft-plugin-filmcraft"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-artcraft-plugin-gridcraft",
+      "title": {
+        "en": "GridCraft for DSH",
+        "zh": "GridCraft Spreadsheet工作台"
+      },
+      "description": {
+        "en": "Spreadsheets: cells, formulas, charts and xlsx read/write, driven headlessly from a DSH plugin over the app's own CLI and MCP server.",
+        "zh": "电子表格：单元格、公式、图表与 xlsx 读写（gridcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiMxNTgwM2QiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzE1ODAzZCI+R0M8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/dsh-artcraft-plugin-gridcraft",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/dsh-artcraft-plugin-gridcraft"
+      },
+      "metadata": {
+        "category": "productivity",
+        "keywords": [
+          "gridcraft",
+          "artcraft",
+          "craft",
+          "document",
+          "tools",
+          "mcp",
+          "dsh-plugin"
+        ],
+        "labels": [
+          "tools",
+          "craft"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.3",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/dsh-artcraft-plugin-gridcraft"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-artcraft-plugin-lightcraft",
+      "title": {
+        "en": "LightCraft for DSH",
+        "zh": "LightCraft Photo library工作台"
+      },
+      "description": {
+        "en": "Photo library and RAW development: catalog, ratings, develop, driven headlessly from a DSH plugin over the app's own CLI and MCP server.",
+        "zh": "照片库与 RAW 显影：目录、评级、显影参数（lightcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiNjYThhMDQiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2NhOGEwNCI+TEM8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/dsh-artcraft-plugin-lightcraft",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/dsh-artcraft-plugin-lightcraft"
+      },
+      "metadata": {
+        "category": "productivity",
+        "keywords": [
+          "lightcraft",
+          "artcraft",
+          "craft",
+          "document",
+          "tools",
+          "mcp",
+          "dsh-plugin"
+        ],
+        "labels": [
+          "tools",
+          "craft"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.3",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/dsh-artcraft-plugin-lightcraft"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-artcraft-plugin-pdfcraft",
+      "title": {
+        "en": "PdfCraft for DSH",
+        "zh": "PdfCraft PDF工作台"
+      },
+      "description": {
+        "en": "PDF reading, editing, text extraction and full-page rendering, driven headlessly from a DSH plugin over the app's own CLI and MCP server.",
+        "zh": "PDF 读取、编辑、抽取与整页渲染（pdfcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiNiOTFjMWMiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2I5MWMxYyI+UEM8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/dsh-artcraft-plugin-pdfcraft",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/dsh-artcraft-plugin-pdfcraft"
+      },
+      "metadata": {
+        "category": "productivity",
+        "keywords": [
+          "pdfcraft",
+          "artcraft",
+          "craft",
+          "document",
+          "tools",
+          "mcp",
+          "dsh-plugin"
+        ],
+        "labels": [
+          "tools",
+          "craft"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.3",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/dsh-artcraft-plugin-pdfcraft"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-artcraft-plugin-photocraft",
+      "title": {
+        "en": "PhotoCraft for DSH",
+        "zh": "PhotoCraft Raster image工作台"
+      },
+      "description": {
+        "en": "Raster editing: layers, selections, filters and export, driven headlessly from a DSH plugin over the app's own CLI and MCP server.",
+        "zh": "位图编辑：图层、选区、滤镜与导出（photocraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiM3YzNhZWQiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzdjM2FlZCI+UEg8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/dsh-artcraft-plugin-photocraft",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/dsh-artcraft-plugin-photocraft"
+      },
+      "metadata": {
+        "category": "productivity",
+        "keywords": [
+          "photocraft",
+          "artcraft",
+          "craft",
+          "document",
+          "tools",
+          "mcp",
+          "dsh-plugin"
+        ],
+        "labels": [
+          "tools",
+          "craft"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.3",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/dsh-artcraft-plugin-photocraft"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-artcraft-plugin-soundcraft",
+      "title": {
+        "en": "SoundCraft for DSH",
+        "zh": "SoundCraft Audio工作台"
+      },
+      "description": {
+        "en": "Digital audio workstation: tracks, effects, mixdown and export, driven headlessly from a DSH plugin over the app's own CLI and MCP server.",
+        "zh": "音频工作站：音轨、效果、混音与导出（soundcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMzY5YTEiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzAzNjlhMSI+U0M8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/dsh-artcraft-plugin-soundcraft",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/dsh-artcraft-plugin-soundcraft"
+      },
+      "metadata": {
+        "category": "productivity",
+        "keywords": [
+          "soundcraft",
+          "artcraft",
+          "craft",
+          "document",
+          "tools",
+          "mcp",
+          "dsh-plugin"
+        ],
+        "labels": [
+          "tools",
+          "craft"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.3",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/dsh-artcraft-plugin-soundcraft"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-artcraft-plugin-vectorcraft",
+      "title": {
+        "en": "VectorCraft for DSH",
+        "zh": "VectorCraft Vector art工作台"
+      },
+      "description": {
+        "en": "Vector art: paths, beziers, strokes and SVG/PDF export, driven headlessly from a DSH plugin over the app's own CLI and MCP server.",
+        "zh": "矢量绘图：路径、贝塞尔、描边与 SVG/PDF 导出（vectorcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiNjMjQxMGMiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2MyNDEwYyI+VkM8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/dsh-artcraft-plugin-vectorcraft",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/dsh-artcraft-plugin-vectorcraft"
+      },
+      "metadata": {
+        "category": "productivity",
+        "keywords": [
+          "vectorcraft",
+          "artcraft",
+          "craft",
+          "document",
+          "tools",
+          "mcp",
+          "dsh-plugin"
+        ],
+        "labels": [
+          "tools",
+          "craft"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.3",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/dsh-artcraft-plugin-vectorcraft"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-artcraft-plugin-wordcraft",
+      "title": {
+        "en": "WordCraft for DSH",
+        "zh": "WordCraft Word processing工作台"
+      },
+      "description": {
+        "en": "Word processing: paragraphs, styles, TOC and docx read/write, driven headlessly from a DSH plugin over the app's own CLI and MCP server.",
+        "zh": "文字处理：段落、样式、目录与 docx 读写（wordcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiMxZDRlZDgiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFkNGVkOCI+V0M8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/dsh-artcraft-plugin-wordcraft",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/dsh-artcraft-plugin-wordcraft"
+      },
+      "metadata": {
+        "category": "productivity",
+        "keywords": [
+          "wordcraft",
+          "artcraft",
+          "craft",
+          "document",
+          "tools",
+          "mcp",
+          "dsh-plugin"
+        ],
+        "labels": [
+          "tools",
+          "craft"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.3",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/dsh-artcraft-plugin-wordcraft"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-composer-prediction",
+      "title": {
+        "en": "Composer Predictions",
+        "zh": "下一句预测 Composer Predictions"
+      },
+      "description": {
+        "en": "Suggest the next user message as composer ghost text after an assistant turn; Tab accepts into the draft, Escape dismisses. Includes Predictions settings and conflict detection.",
+        "zh": "助手回复后在空输入框显示下一句预测；Tab 接受到草稿、Esc 关闭，含 Predictions 设置与同类插件冲突检测。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzOGJkZjgiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzM4YmRmOCI+Q1A8L3RleHQ+PC9zdmc+",
+      "author": "Amir Bazylkhanov",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/dsh-composer-prediction",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/dsh-composer-prediction"
+      },
+      "metadata": {
+        "category": "productivity",
+        "keywords": [
+          "composer",
+          "prediction",
+          "ghost-text",
+          "tab-to-accept",
+          "productivity"
+        ],
+        "labels": [
+          "tools"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.7.7",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/dsh-composer-prediction"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "feature-dev",
+      "title": {
+        "en": "Feature Dev Workflow",
+        "zh": "功能开发工作流"
+      },
+      "description": {
+        "en": "Risk-adaptive feature workflow ported from ZCode: explore, architect, bounded implementation, evidence verification and independent review as five skills.",
+        "zh": "从 ZCode 移植的功能开发工作流：探索、架构、有边界实现、证据验证与独立审查，五个技能可由 subagent 分角色执行。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiM2MGE1ZmEiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzYwYTVmYSI+RkQ8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/feature-dev",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/feature-dev"
+      },
+      "metadata": {
+        "category": "development",
+        "keywords": [
+          "feature-development",
+          "workflow",
+          "code-review",
+          "architecture",
+          "subagent",
+          "skills"
+        ],
+        "labels": [
+          "skills",
+          "workflow"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.2.1",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/feature-dev"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ghidra-bridge",
+      "title": {
+        "en": "Ghidra Bridge",
+        "zh": "Ghidra 接入桥"
+      },
+      "description": {
+        "en": "Ghidra + GhidraMCP setup, headless analysis and DSH MCP wiring.",
+        "zh": "Ghidra + GhidraMCP 安装、无头批量分析与 DSH MCP 接线。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzFmMjkzNyIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzNGQzOTkiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzM0ZDM5OSI+R0g8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/ghidra-bridge",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/ghidra-bridge"
+      },
+      "metadata": {
+        "category": "toolchain",
+        "keywords": [
+          "ghidra",
+          "ghidramcp",
+          "decompiler",
+          "mcp",
+          "reverse-engineering"
+        ],
+        "labels": [
+          "skills",
+          "mcp",
+          "setup"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.2.0",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/ghidra-bridge"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "imgen",
+      "title": {
+        "en": "imgen Local Image Generation",
+        "zh": "本机生图 imgen"
+      },
+      "description": {
+        "en": "Image generation and editing on the local ChatGPT/Codex OAuth login: imgen skill plus the imgen MCP server (imgen_generate / imgen_health), no API key, no per-image billing.",
+        "zh": "用本机已登录的 ChatGPT / Codex 账号（OAuth）生图与改图：imgen 技能 + imgen MCP（imgen_generate / imgen_health），不要 API Key，不按张计费。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmYmJmMjQiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZiYmYyNCI+SUc8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/imgen",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/imgen"
+      },
+      "metadata": {
+        "category": "productivity",
+        "keywords": [
+          "image",
+          "image-generation",
+          "imgen",
+          "codex",
+          "chatgpt",
+          "oauth",
+          "mcp",
+          "skills"
+        ],
+        "labels": [
+          "skills",
+          "mcp",
+          "media"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/imgen"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "lcu",
+      "title": {
+        "en": "LCU Computer Use",
+        "zh": "真·桌面操作 LCU"
+      },
+      "description": {
+        "en": "Codex computer use decoupled from the app: a relay that puts the official ChatGPT/Codex CUA runtime (LCU) behind DSH MCP, with js / js_reset and a Touch ID approval policy.",
+        "zh": "把 Codex 官方 computer-use 运行时（LCU）接成 DSH 的 MCP：js / js_reset 两个工具，App 控制按 Touch ID 批准名单放行，未批准一律 decline。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmNDcyYjYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2Y0NzJiNiI+Q1U8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/lcu",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/lcu"
+      },
+      "metadata": {
+        "category": "toolchain",
+        "keywords": [
+          "computer-use",
+          "lcu",
+          "codex",
+          "macos",
+          "desktop-automation",
+          "cua",
+          "mcp",
+          "skills"
+        ],
+        "labels": [
+          "skills",
+          "mcp",
+          "desktop"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/lcu"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "project-memory",
+      "title": {
+        "en": "Project Memory",
+        "zh": "项目级记忆"
+      },
+      "description": {
+        "en": "Per-project memory isolated by absolute-path hash under .dsh/memory/<slug>.md, with a project-memory skill and memory_write/memory_read/memory_status tools.",
+        "zh": "按项目绝对路径哈希隔离的 .dsh/memory/<slug>.md 记忆，配 project-memory 技能与三个记忆工具。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzExMTgyNyIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzNGQzOTkiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzM0ZDM5OSI+UE08L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/project-memory",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/project-memory"
+      },
+      "metadata": {
+        "category": "development",
+        "keywords": [
+          "memory",
+          "project",
+          "context",
+          "persistence"
+        ],
+        "labels": [
+          "skills",
+          "workflow"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/project-memory"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "rea",
+      "title": {
+        "en": "REA Native Reverse Analysis",
+        "zh": "REA 原生逆向分析"
+      },
+      "description": {
+        "en": "REA skill plus the official rea-agents MCP server for native, managed, Electron and firmware artifacts.",
+        "zh": "REA 配套 Skill + 官方 rea-agents MCP，覆盖原生、托管、Electron 与固件目标。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzExMTgyNyIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiNhNzhiZmEiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIxNyIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2E3OGJmYSI+UkVBPC90ZXh0Pjwvc3ZnPg==",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/rea",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/rea"
+      },
+      "metadata": {
+        "category": "reverse-engineering",
+        "keywords": [
+          "rea",
+          "reverse-engineering",
+          "binary",
+          "mcp",
+          "skills"
+        ],
+        "labels": [
+          "skills",
+          "mcp"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.4.1",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/rea"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "reverse-skills",
+      "title": {
+        "en": "Reverse Skill",
+        "zh": "Reverse Skill 逆向技能包"
+      },
+      "description": {
+        "en": "46 reverse-engineering, exploitation, CTF, mobile and firmware skills with the upstream routing core.",
+        "zh": "46 个逆向/破解/渗透/CTF/移动/固件技能，含上游路由核心与 scope 门禁。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBmMTcyYSIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzOGJkZjgiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzM4YmRmOCI+UlM8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/reverse-skills",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/reverse-skills"
+      },
+      "metadata": {
+        "category": "reverse-engineering",
+        "keywords": [
+          "reverse-engineering",
+          "ctf",
+          "pentest",
+          "mobile",
+          "firmware",
+          "skills"
+        ],
+        "labels": [
+          "skills",
+          "routing"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.2.2",
+          "publishTimestamp": 1793255762,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "8ef8844b4bbb44d99c38fbdceccb9d14a1ed3eca",
+            "path": "plugins/reverse-skills"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    }
+  ]
+}
