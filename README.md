@@ -45,6 +45,7 @@ pnpm add "git+https://github.com/kingmaozi/hackerking-dsh-market.git#<commit>&pa
 | `dsh-artcraft-plugin-effectcraft` | 0.1.3 | productivity | 动效合成：合成、关键帧、特效与渲染（effectcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。 |
 | `dsh-artcraft-plugin-filmcraft` | 0.1.3 | productivity | 非线性剪辑：时间线、转场、多机位与转码（filmcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。 |
 | `dsh-artcraft-plugin-lightcraft` | 0.1.3 | productivity | 照片库与 RAW 显影：目录、评级、显影参数（lightcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。 |
+| `dsh-plugin-memory` | 0.7.2 | development | 跨会话 Markdown 项目记忆：主记忆文件每轮注入（预算内截断）+ 专题文件按需加载，可选后台静默蒸馏兜底模型忘了记的内容；两层结构、内容哈希去重、每类条数上限。 |
 
 ## 安装后处理（MCP 类插件）
 

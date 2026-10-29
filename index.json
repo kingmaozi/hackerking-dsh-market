@@ -141,7 +141,7 @@
       "versions": [
         {
           "version": "0.1.0",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -149,7 +149,7 @@
             "path": "plugins/agent-reach"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -189,7 +189,7 @@
       "versions": [
         {
           "version": "0.1.0",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -197,7 +197,7 @@
             "path": "plugins/computer-use"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -237,7 +237,7 @@
       "versions": [
         {
           "version": "0.2.0",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -245,7 +245,7 @@
             "path": "plugins/crack-lab"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -286,7 +286,7 @@
       "versions": [
         {
           "version": "0.1.3",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -294,7 +294,7 @@
             "path": "plugins/dsh-artcraft-plugin-cadcraft"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -335,7 +335,7 @@
       "versions": [
         {
           "version": "0.1.3",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -343,7 +343,7 @@
             "path": "plugins/dsh-artcraft-plugin-deckcraft"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -384,7 +384,7 @@
       "versions": [
         {
           "version": "0.1.3",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -392,7 +392,7 @@
             "path": "plugins/dsh-artcraft-plugin-designcraft"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -433,7 +433,7 @@
       "versions": [
         {
           "version": "0.1.3",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -441,7 +441,7 @@
             "path": "plugins/dsh-artcraft-plugin-effectcraft"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -482,7 +482,7 @@
       "versions": [
         {
           "version": "0.1.3",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -490,7 +490,7 @@
             "path": "plugins/dsh-artcraft-plugin-filmcraft"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -531,7 +531,7 @@
       "versions": [
         {
           "version": "0.1.3",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -539,7 +539,7 @@
             "path": "plugins/dsh-artcraft-plugin-gridcraft"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -580,7 +580,7 @@
       "versions": [
         {
           "version": "0.1.3",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -588,7 +588,7 @@
             "path": "plugins/dsh-artcraft-plugin-lightcraft"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -629,7 +629,7 @@
       "versions": [
         {
           "version": "0.1.3",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -637,7 +637,7 @@
             "path": "plugins/dsh-artcraft-plugin-pdfcraft"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -678,7 +678,7 @@
       "versions": [
         {
           "version": "0.1.3",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -686,7 +686,7 @@
             "path": "plugins/dsh-artcraft-plugin-photocraft"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -727,7 +727,7 @@
       "versions": [
         {
           "version": "0.1.3",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -735,7 +735,7 @@
             "path": "plugins/dsh-artcraft-plugin-soundcraft"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -776,7 +776,7 @@
       "versions": [
         {
           "version": "0.1.3",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -784,7 +784,7 @@
             "path": "plugins/dsh-artcraft-plugin-vectorcraft"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -825,7 +825,7 @@
       "versions": [
         {
           "version": "0.1.3",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -833,7 +833,7 @@
             "path": "plugins/dsh-artcraft-plugin-wordcraft"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -872,7 +872,7 @@
       "versions": [
         {
           "version": "0.7.7",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -880,7 +880,7 @@
             "path": "plugins/dsh-composer-prediction"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -920,7 +920,7 @@
       "versions": [
         {
           "version": "0.2.1",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -928,7 +928,7 @@
             "path": "plugins/feature-dev"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -968,7 +968,7 @@
       "versions": [
         {
           "version": "0.2.0",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -976,7 +976,7 @@
             "path": "plugins/ghidra-bridge"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -1019,7 +1019,7 @@
       "versions": [
         {
           "version": "0.1.0",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -1027,7 +1027,7 @@
             "path": "plugins/imgen"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -1070,7 +1070,7 @@
       "versions": [
         {
           "version": "0.1.0",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -1078,7 +1078,7 @@
             "path": "plugins/lcu"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -1116,7 +1116,7 @@
       "versions": [
         {
           "version": "0.1.0",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -1124,7 +1124,7 @@
             "path": "plugins/project-memory"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -1163,7 +1163,7 @@
       "versions": [
         {
           "version": "0.4.1",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -1171,7 +1171,7 @@
             "path": "plugins/rea"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
@@ -1211,7 +1211,7 @@
       "versions": [
         {
           "version": "0.2.2",
-          "publishTimestamp": 1793256289,
+          "publishTimestamp": 1793260030,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
@@ -1219,7 +1219,53 @@
             "path": "plugins/reverse-skills"
           },
           "engines": {
-            "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-plugin-memory",
+      "title": {
+        "en": "Project Memory (auto memory)",
+        "zh": "项目级记忆（自动记忆）"
+      },
+      "description": {
+        "en": "Cross-session Markdown project memory: the main file is injected every turn with a truncation budget, topic files load on demand, and an opt-in background distillation catches what the model forgot to save. Two layers, content-hash dedupe, per-category caps.",
+        "zh": "跨会话 Markdown 项目记忆：主记忆文件每轮注入（预算内截断）+ 专题文件按需加载，可选后台静默蒸馏兜底模型忘了记的内容；两层结构、内容哈希去重、每类条数上限。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzNGQzOTkiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIxNyIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzM0ZDM5OSI+TUVNPC90ZXh0Pjwvc3ZnPg==",
+      "homepage": "https://github.com/justhalfbit/dsh-plugin-memory",
+      "repository": {
+        "url": "https://github.com/justhalfbit/dsh-plugin-memory.git"
+      },
+      "metadata": {
+        "category": "development",
+        "keywords": [
+          "memory",
+          "project-memory",
+          "auto-memory",
+          "distill",
+          "context",
+          "markdown"
+        ],
+        "labels": [
+          "skills",
+          "workflow"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.7.2",
+          "publishTimestamp": 1793260030,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/justhalfbit/dsh-plugin-memory",
+            "commit": "34f87c42d3f66dabcf4476d6cdbe2c6f8e243527"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]
