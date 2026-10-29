@@ -45,7 +45,7 @@ pnpm add "git+https://github.com/kingmaozi/hackerking-dsh-market.git#<commit>&pa
 | `dsh-artcraft-plugin-effectcraft` | 0.1.3 | productivity | 动效合成：合成、关键帧、特效与渲染（effectcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。 |
 | `dsh-artcraft-plugin-filmcraft` | 0.1.3 | productivity | 非线性剪辑：时间线、转场、多机位与转码（filmcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。 |
 | `dsh-artcraft-plugin-lightcraft` | 0.1.3 | productivity | 照片库与 RAW 显影：目录、评级、显影参数（lightcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。 |
-| `dsh-memory-palace` | 1.8.2 | development | ZCode 式工作区记忆：每个项目一份 <cwd>/.deepseek-harness/MEMORY.md，另有用户级跨项目偏好文件；设置页可列记忆目录、文件并打开文档。每轮自动注入，默认开启，装完即用。 |
+| `dsh-memory-palace` | 1.8.2 | development | ZCode 式工作区记忆：每个项目一份 <cwd>/.deepseek-harness/MEMORY.md，另有用户级跨项目偏好文件；设置页可列记忆目录、文件并打开文档。每轮自动注入，默认开启。注意：它由 WorkBuddy 记忆移植而来，默认会同步读写 .workbuddy/.codebuddy 目录，只用 DSH 请在 profile 覆盖 bridgeBuddyMemory: false。 |
 
 ## 安装后处理（MCP 类插件）
 
