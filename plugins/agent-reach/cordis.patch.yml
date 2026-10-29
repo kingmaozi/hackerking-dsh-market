@@ -1,0 +1,36 @@
+# agent-reach bundle patch
+#
+# Two rows:
+#   1. agent-reach — the bundled `agent-reach-mcp` skill provider (read-only).
+#   2. mcp-agent-reach — the Agent Reach MCP server over stdio (reach_* tools).
+#
+# The skill is named `agent-reach-mcp`, not `agent-reach`: a CLI-based skill with
+# the plain name already exists in ~/.agents/skills/agent-reach and the registry
+# keeps one provider per name. Two different things, two different skills:
+#   agent-reach      -> 15-platform CLI (xiaohongshu / X / FB / IG / xueqiu ...)
+#   agent-reach-mcp  -> reach_* channels (tavily / exa / jina / parallel / ...)
+#
+# Credentials stay outside the plugin: ~/.agent-reach/briking/{keys.env,social.env,
+# providers.json}. `mcp/launch.sh` sources the two env files and exports only the
+# handful of variables the server needs; the rest is read lazily from
+# providers.json. `deep` runs can take minutes, hence the 300000ms tool timeout.
+- insert:
+    - id: agent-reach
+      name: agent-reach
+
+    - id: mcp-agent-reach
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: reach
+        transport: stdio
+        command: /bin/sh
+        args:
+          - /Users/zhangsugang/Documents/hackerking/plugins/agent-reach/mcp/launch.sh
+        env:
+          PATH: /opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+          AGENT_REACH_HOME: /Users/zhangsugang/.agent-reach/briking
+        toolCallTimeoutMs: 300000
+        failOnStartupError: false
+        reconnect:
+          enabled: true
+          maxAttempts: 3

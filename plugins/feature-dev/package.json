@@ -1,0 +1,47 @@
+{
+  "name": "feature-dev",
+  "version": "0.2.1",
+  "description": "功能开发工作流（DSH 原生适配）：探索、架构、有边界实现、证据验证与独立审查，5 个技能 + feature_dev_role 角色派单工具（按角色绑定 provider/model/思考档）",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "skills",
+    "agents",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "NOTICE.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "selftest": "node scripts/selftest.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "feature-development",
+    "code-review",
+    "workflow",
+    "subagent",
+    "role-routing",
+    "skills"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+    "directory": "plugins/feature-dev"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/feature-dev"
+}

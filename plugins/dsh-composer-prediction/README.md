@@ -1,0 +1,264 @@
+# dsh-composer-prediction
+
+ChatGPT-style **composer predictions** for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness).
+
+After each assistant turn, the plugin asks a cheap chat model for the message you
+are most likely to send next and paints it as **ghost text in the empty
+composer**. Press **Tab** to insert it into the draft (nothing is sent), **Esc**
+to dismiss it, or just start typing to discard it. Turn the whole thing off in
+**Settings → Predictions**, a dedicated Settings section this plugin
+contributes (`settings.section`), because the shipped Plugins page is read-only.
+
+## Behaviour
+
+| Event | Result |
+|---|---|
+| Assistant turn ends (`running: true → false`) | A prediction is requested after the configured delay |
+| Composer is not empty, or you are already typing | Nothing is requested or shown |
+| An IME composition is active (`data-composer-composing`) | No new prediction is requested and the offer is hidden for the turn, until the composition ends |
+| **Tab** while a prediction is visible | The whole suggestion is inserted into the draft; nothing is sent |
+| **Esc** while a prediction is visible | The offer is withdrawn and not repeated for that turn |
+| You open a session that already has an assistant answer | One prediction is made for its latest turn, then deduped per session + turn |
+| You switch to another session and back | The cached offer is restored immediately; no new request is made (up to 40 sessions are remembered) |
+| A switched-to session needs a new prediction | It waits for the chat store to swap (node list change, 400 ms cap) so the request can never carry the previous session's transcript |
+| You type or attach a file | The offer is hidden; clearing the draft brings it back for the same turn |
+| You switch the feature off and back on | Forgets the session's offer and "already asked" marker, then predicts again immediately |
+| You accept, dismiss, start a new turn, or disable the feature | The offer is discarded and any in-flight request is cancelled |
+| A response arrives late or for an older turn | Dropped — it can never replace or resurrect a newer offer |
+
+## Install
+
+From the [npm registry](https://www.npmjs.com/package/dsh-composer-prediction):
+
+```sh
+dsh plugin --profile <your-profile> add dsh-composer-prediction
+```
+
+Or straight from a checkout:
+
+```sh
+dsh plugin --profile <your-profile> add ./dsh-composer-prediction --config.auto-install-peers=false
+```
+
+`dsh` links the package into the profile and appends the bundle to
+`dsh.profile.bundles` because the package declares `dsh.bundle`. Restart the app
+afterwards (a page refresh only reloads the browser half).
+
+Verify the layer composed without booting:
+
+```sh
+dsh --profile <your-profile> --dump-config
+```
+
+You should see a `# == dsh-composer-prediction` layer and a `composer-predict` row.
+
+Remove it with:
+
+```sh
+dsh plugin --profile <your-profile> remove dsh-composer-prediction
+```
+
+### Install from the Discover tab
+
+[`market/index.json`](market/index.json) is a ready-to-host plugin-market index
+listing this package. Turn on **Custom plugin markets**, then add this URL under
+**Plugins → Discover → Add index source**:
+
+```
+https://raw.githubusercontent.com/Amir-Bazylkhanov/dsh-composer-prediction/main/market/index.json
+```
+
+Regenerate it after a release with `npm run market`.
+
+## Configuration
+
+Everything lives in `$DSH_HOME/composer-predict.json` and in the Settings page.
+The document is written by the plugin's host half (merge + atomic rename); it is
+not a `settings.yaml` namespace because the 0.2.x `ctx.settings` service is a form
+layer over loader entries and no longer hands a plugin a live namespace scope.
+
+| Key | Default | Meaning |
+|---|---|---|
+| `enabled` | `true` | Master switch (also the Settings toggle) |
+| `provider` | `""` | Empty = the deployment default route (`ctx.agentDefaultModel`) |
+| `model` | `""` | Empty = the deployment default model |
+| `maxTokens` | `64` | Output cap for the prediction |
+| `temperature` | `0.8` | Sampling temperature (direct-HTTP transport only) |
+| `delayMs` | `0` | Quiet period after a turn before predicting |
+| `maxSuggestionChars` | `200` | Hard cap on an offered suggestion |
+| `contextMessages` | `10` | Trailing messages fed to the predictor |
+| `maxContextChars` | `6000` | Transcript character budget |
+| `baseUrl` | `https://api.deepseek.com` | Fallback only: used when no harness LLM service is composed |
+| `apiKey` | `""` | Fallback only: `DEEPSEEK_API_KEY`, then `$DSH_HOME/.credentials.yaml` |
+
+### Model and reasoning
+
+By default the plugin calls **the harness's own LLM service** (`ctx.llm`), not a
+private endpoint. That means:
+
+- it uses the **same provider route and credentials as your sessions** — with a
+  subscription route (`deepseek-account`, Kimi, …) you need no API key at all;
+- the model is your **deployment default** (`ctx.agentDefaultModel`, e.g.
+  `deepseek-flash`) unless you override `provider`/`model` in Settings;
+- **reasoning is pinned to the model's cheapest advertised effort**
+  (`model.reasoning.efforts[0]`). A next-message guess should not spend a
+  thinking budget; if the model advertises no efforts, the provider default is
+  left alone. Output is capped at `maxTokens` (64 by default).
+
+The direct OpenAI-compatible HTTP path (`baseUrl` + `apiKey`) exists only for
+compositions with no `ctx.llm`; it is not used in a normal DSH install.
+
+If a prediction cannot run, the reason is no longer swallowed: the Settings card
+shows it and the browser console logs `[composer-predict] …`.
+
+### Prediction quality
+
+The predictor asks for **ranked alternatives** and shows the first one; the ghost
+carries a small `1/3` pager and **Shift+Tab** walks the rest before Tab inserts
+one. Four knobs decide how good that list is:
+
+| Setting | Default | Effect |
+|---|---|---|
+| `maxTokens` | `512` | Output budget for one prediction. Reasoning models spend part of it thinking; the first version's `64` often produced empty answers |
+| `candidates` | `3` | How many alternatives to request |
+| `reasoningEffort` | `auto` | `auto` keeps the model default (best quality); `cheapest` pins the cheapest advertised effort (what every earlier version did, and the main reason suggestions were dull or missing) |
+| `maxSuggestionChars` | `200` | Hard cap per offered line |
+
+The prompt also tells the model what to look for — what the last assistant turn
+left unfinished (an unrun test, an unverified claim, a diff to review, a step it
+proposed) — and asks it to mirror the developer's own language and length.
+
+**Style memory:** accepting a suggestion reports it back (`accepted`), and the
+host keeps the last 8 accepted lines in `composer-predict.json` as
+`styleSamples`. Later prompts include them as phrasing examples, so the ghost
+drifts toward how this user actually writes.
+
+A prediction that still comes back empty shows its reason in the composer
+(`no prediction: …`, `composer-predict: …`), and `window.__composerPredict.state()`
+in DevTools exposes the last result, including how many candidates it had.
+
+### Picking a model
+
+The **Model** control on the Settings page is a list, not a text field: it offers
+every route this install already has, grouped by provider, exactly as the
+composer's model menu does — plus **Automatic (deployment default)** to clear the
+override. Choosing an entry writes `provider` and `model` together; the
+**Refresh** button re-reads the catalog when a provider was added or a
+credential changed.
+
+The browser half asks the plugin's own RPC for that list (`config.routes`), and
+the host half answers it from `ctx.llm` (`listProviders()` joined with
+`listModels(provider)`), so no second provider/credential discovery exists in
+this plugin. A provider that fails to list keeps its row in `failures` and is
+named in the hint instead of emptying the list; results are cached for 60 s and
+`refresh: true` bypasses the cache.
+
+Manual `provider` / `model` entry stays available below the list for routes a
+catalog does not advertise, and it is the only editor on compositions without a
+harness LLM service. Because the endpoint lives in the host half, adding it needs
+one app restart (a page refresh only reloads the browser half); until then the
+card says so and the manual fields still work.
+
+### Settings page and status
+
+The plugin contributes its own **Settings → Predictions** section
+(`settings.section`, the same list slot that hosts "Built-in plugins"), with the
+enable switch, provider/model overrides and timing.
+
+There is no placeholder state: the ghost text simply appears when it is ready.
+When a prediction comes back empty or fails, the composer shows the reason
+instead (`no prediction: no-model-route`, `composer-predict: provider HTTP 401`, …)
+and keeps showing it until you type, dismiss it, switch session, or disable the
+feature. The console logs `[composer-predict] …` in both cases.
+
+## How it works
+
+```
+ host half (lib/index.js, lib/handler.js)
+   ├─ config document `composer-predict.json`  → $DSH_HOME
+   └─ POST /api/composer-predict/rpc         → config.get / config.set / predict / cancel
+                                                └─ chat completion → normalizeSuggestion()
+
+ browser half (lib/client.js)
+   ├─ slot conversation.input.overlay  → ghost text over the empty composer
+   ├─ slot settings.section            → "Predictions" Settings page
+   ├─ useChat(legacy.nodes)            → transcript tail
+   ├─ useInput(draft) / useSession(running) → eligibility
+   └─ capture keydown                  → Tab accepts, Esc dismisses
+```
+
+The overlay measures the real `[data-composer-input]` element and clones its
+font metrics, so padding, wrapping and height follow the composer instead of
+guessing at CSS. The native placeholder is hidden (and restored) only while the
+ghost is visible.
+
+Bundles are built without a toolchain: `scripts/build-client.mjs` concatenates
+the shared helpers and the component body into the `window.__ModuleLoader__`
+factory the host serves — no bundler, no dependencies, no network.
+
+## Development
+
+```sh
+node scripts/build-client.mjs   # regenerate lib/client.js
+node scripts/test.mjs           # 33 tests across shared/host/client
+node --check lib/index.js
+```
+
+Tests cover suggestion normalization, transcript extraction, prompt building,
+config sanitization, every RPC endpoint (with a stubbed provider), cancellation,
+and a VM smoke test that loads the generated bundle, runs `apply()` and renders
+the overlay.
+
+### Manual verification
+
+The client exposes `window.__composerPredict` so the overlay can be exercised
+without waiting for a turn:
+
+```js
+__composerPredict.suggest('Add a regression test for the empty-input case.')
+__composerPredict.state()
+__composerPredict.clear()
+__composerPredict.predictNow()   // re-run the real prediction path
+```
+
+## Coexistence
+
+Install only one composer ghost-text plugin. A plugin such as `dsh-next-hint`
+paints a suggestion into the same empty composer for the same finished turn, so
+installing both means two overlapping ghosts and two model calls per turn. Both
+also accept `Tab` while a ghost is visible, so one Tab press can act on both
+offers. Pick one.
+
+If both are installed anyway, this plugin stands down at runtime: it checks the
+client module manifest for known ghost-text packages (`dsh-next-hint`), watches
+the composer overlay slot for ghost-like entries, and recognises
+`dsh-next-hint`'s `data-next-hint*` DOM markers. While a conflict is detected no
+prediction is requested or painted, Tab/Esc stay untouched, and
+**Settings → Predictions** says why. Detection also re-runs on DOM and slot
+changes, so a plugin that mounts late is caught before the next turn.
+
+Ghost-text plugins can also opt into the shared `data-composer-ghost` attribute
+on their host element (this plugin sets `data-composer-ghost="dsh-composer-prediction"`);
+a plugin that sees a foreign value pauses the same way.
+
+## Limitations
+
+- The prediction triggers on the idle transition; if you are already typing when
+  the turn ends, no offer is made (deliberately: it should never fight the user).
+- The ghost is positioned over the first line of an empty composer; a composer
+  pre-filled with attachments does not show an offer.
+- `predictNow` needs a finished turn to have transcript context.
+- Verified against DSH `0.2.1-rc.2`; the client bundle targets the
+  `conversation.input.overlay` slot and the `data-composer-input` contenteditable
+  introduced in `0.1.5`.
+
+## Credits
+
+The Settings navigation glyph is from [SVG Repo](https://www.svgrepo.com) and is
+**CC0 1.0** (public domain; no attribution required — the credit is a courtesy).
+It has been modified: cropped viewBox, filled with `currentColor` via an alpha
+mask. See [NOTICE](NOTICE) for details.
+
+## License
+
+MIT

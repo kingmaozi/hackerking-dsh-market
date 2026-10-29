@@ -1,0 +1,34 @@
+# imgen bundle patch
+#
+# Two rows:
+#   1. imgen  — the bundled `imgen` skill provider (read-only).
+#   2. mcp-imgen  — the imgen MCP server over stdio (imgen_generate / imgen_health).
+#
+# The MCP row needs node >= 20 and a local `codex login` (~/.codex/auth.json).
+# That login is read-only for DSH: the server refreshes the OAuth token and
+# writes it back to the same file, nothing else. Disable `mcp-imgen` if you only
+# want the skill text.
+#
+# `mcp/launch.sh` discovers node itself (PATH → /opt/homebrew/bin → nvm → volta),
+# so no node path is hard-coded here. Output defaults to ~/.dsh/imgen/<stamp>/;
+# set IMGEN_OUTPUT_HOME below to move it.
+- insert:
+    - id: imgen
+      name: imgen
+
+    - id: mcp-imgen
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: imgen
+        transport: stdio
+        command: /bin/sh
+        args:
+          - /Users/zhangsugang/Documents/hackerking/plugins/imgen/mcp/launch.sh
+        env:
+          PATH: /opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+          IMGEN_OUTPUT_HOME: /Users/zhangsugang/.dsh/imgen
+        toolCallTimeoutMs: 300000
+        failOnStartupError: false
+        reconnect:
+          enabled: true
+          maxAttempts: 3

@@ -1,0 +1,43 @@
+{
+  "name": "ghidra-bridge",
+  "version": "0.2.0",
+  "description": "Ghidra + GhidraMCP 接入链路（Skill + setup）for DeepSeek Harness",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "skills",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "NOTICE.md"
+  ],
+  "scripts": {
+    "selftest": "node scripts/selftest.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "ghidra",
+    "ghidramcp",
+    "reverse-engineering",
+    "mcp"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+    "directory": "plugins/ghidra-bridge"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/ghidra-bridge"
+}

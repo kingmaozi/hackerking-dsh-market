@@ -1,0 +1,50 @@
+{
+  "name": "lcu",
+  "version": "0.1.0",
+  "description": "真·桌面操作（DSH 原生适配）：把 Codex/ChatGPT 桌面端的官方 computer-use 运行时（LCU）接成 MCP，js / js_reset 两个工具 + lcu-computer-use 技能",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "skills",
+    "mcp",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "NOTICE.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "selftest": "node scripts/selftest.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "computer-use",
+    "lcu",
+    "codex",
+    "macos",
+    "desktop-automation",
+    "mcp"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+    "directory": "plugins/lcu"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/lcu"
+}

@@ -1,0 +1,5 @@
+# Installed by `dsh plugin add dsh-artcraft-plugin-lightcraft`.
+# One row: the plugin package that provides the LightCraft tools.
+- insert:
+    - id: artcraft-lightcraft
+      name: "dsh-artcraft-plugin-lightcraft"

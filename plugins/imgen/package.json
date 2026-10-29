@@ -1,0 +1,64 @@
+{
+  "name": "imgen",
+  "version": "0.1.0",
+  "description": "本机生图 / 改图（DSH 原生适配）：imgen 技能 + imgen MCP，用本机已登录的 ChatGPT / Codex 账号（OAuth）出图，不需要 API Key",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "skills",
+    "mcp",
+    "dist",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "NOTICE.md",
+    "LICENSE"
+  ],
+  "bundledDependencies": [
+    "@ossiana/node-libcurl",
+    "node-libcurl",
+    "node-libcurl-darwin-arm64",
+    "commander",
+    "node-addon-api"
+  ],
+  "scripts": {
+    "selftest": "node scripts/selftest.mjs",
+    "cli": "node dist/cli.js"
+  },
+  "dependencies": {
+    "@ossiana/node-libcurl": "^1.10.7",
+    "commander": "^12.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "image-generation",
+    "imgen",
+    "codex",
+    "chatgpt",
+    "oauth",
+    "mcp",
+    "skills"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+    "directory": "plugins/imgen"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/imgen"
+}

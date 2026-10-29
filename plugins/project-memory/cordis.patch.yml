@@ -1,0 +1,7 @@
+# project-memory bundle patch
+#
+# One skill provider (`project-memory`) plus three memory tools. Per-project
+# state lives in `<project>/.dsh/memory/<slug>.md`; nothing global is written.
+- insert:
+    - id: project-memory
+      name: project-memory

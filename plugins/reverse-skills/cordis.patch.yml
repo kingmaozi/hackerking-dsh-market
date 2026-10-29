@@ -1,0 +1,8 @@
+# reverse-skills bundle patch
+#
+# The bundle contributes one agent-plane skill provider. The provider is
+# read-only and registers into the calling layer, so installing this bundle
+# never edits or shadows the user's own skill roots.
+- insert:
+    - id: reverse-skills
+      name: reverse-skills

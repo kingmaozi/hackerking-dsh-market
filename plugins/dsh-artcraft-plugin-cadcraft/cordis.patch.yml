@@ -1,0 +1,5 @@
+# Installed by `dsh plugin add dsh-artcraft-plugin-cadcraft`.
+# One row: the plugin package that provides the CADCraft tools.
+- insert:
+    - id: artcraft-cadcraft
+      name: "dsh-artcraft-plugin-cadcraft"

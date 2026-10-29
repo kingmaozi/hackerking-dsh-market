@@ -1,0 +1,34 @@
+# lcu bundle patch
+#
+# Two rows:
+#   1. lcu        — the `lcu-computer-use` skill provider (read-only).
+#   2. mcp-lcu        — the relay that speaks MCP to DSH and to the Codex CUA runtime.
+#
+# Why a relay instead of launching `lcu` directly: the runtime refuses `cua.getApp(...)`
+# unless the MCP client declares the `elicitation` capability, and DSH's MCP client
+# does not. The relay declares it, filters the model-visible tools down to `js` /
+# `js_reset` (the others are host-only), and answers approval requests from the
+# owner's Touch ID allow-list (`lcu apps allow`). Everything else is declined.
+#
+# Prereqs: LCU installed (`install.sh --runtime-only` → ~/.local/share/lcu/current)
+# and the ChatGPT desktop app present. No PATH dependency: run.sh discovers node.
+- insert:
+    - id: lcu
+      name: lcu
+
+    - id: mcp-lcu
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: lcu
+        transport: stdio
+        command: /bin/sh
+        args:
+          - /Users/zhangsugang/Documents/hackerking/plugins/lcu/mcp/run.sh
+        env:
+          PATH: /opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+          LCU_BIN: /Users/zhangsugang/.local/share/lcu/current/bin/lcu
+        toolCallTimeoutMs: 300000
+        failOnStartupError: false
+        reconnect:
+          enabled: true
+          maxAttempts: 3

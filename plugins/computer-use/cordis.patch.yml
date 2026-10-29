@@ -1,0 +1,12 @@
+# computer-use bundle patch
+#
+# 9 个 cua_* 工具：status / screenshot / windows / click / move / type / key / scroll / drag。
+# 无 skill provider、无 MCP、无宿主内部包 import —— 只依赖 tools 服务（+ 可选 attachments 用于内联截图）。
+- insert:
+    - id: computer-use
+      name: computer-use
+      config:
+        inlineImages: true          # 截图默认作为图片块回给模型（需 attachments 服务 + 支持图像输入的模型）
+        maxImageWidth: 0            # 0 = 按显示器逻辑宽度（本机主屏 1920）；设 1280 可省 token
+        restoreClipboard: true      # 粘贴输入后还原剪贴板文本
+        skipPermissionGate: false   # true = 跳过辅助功能/屏幕录制闸门（不建议；仅用于排障）

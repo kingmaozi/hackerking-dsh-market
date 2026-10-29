@@ -1,0 +1,5 @@
+# Installed by `dsh plugin add dsh-artcraft-plugin-effectcraft`.
+# One row: the plugin package that provides the EffectCraft tools.
+- insert:
+    - id: artcraft-effectcraft
+      name: "dsh-artcraft-plugin-effectcraft"

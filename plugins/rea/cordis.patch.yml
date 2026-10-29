@@ -1,0 +1,33 @@
+# rea bundle patch
+#
+# Two rows:
+#   1. rea  — the bundled REA skill provider (read-only).
+#   2. mcp-rea  — the official rea-agents MCP server over stdio.
+#
+# The MCP row is optional: disable `mcp-rea` in the profile patch to use the
+# skill alone. `rea-agents` is fetched by npx on first launch; analysis engines
+# (Ghidra / IDA / JADX / Binwalk) are separate and are not installed here.
+- insert:
+    - id: rea
+      name: rea
+
+    - id: mcp-rea
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: rea
+        transport: stdio
+        command: /Users/zhangsugang/.nvm/versions/node/v24.14.0/bin/node
+        args:
+          - /Users/zhangsugang/Documents/hackerking/plugins/rea/lib/mcp-compat.js
+          - /Users/zhangsugang/.nvm/versions/node/v24.14.0/bin/npx
+          - '-y'
+          - 'rea-agents@6.4.0'
+          - 'mcp'
+        env:
+          PATH: /Users/zhangsugang/.nvm/versions/node/v24.14.0/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+          npm_config_yes: 'true'
+        toolCallTimeoutMs: 120000
+        failOnStartupError: false
+        reconnect:
+          enabled: true
+          maxAttempts: 5

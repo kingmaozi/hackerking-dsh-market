@@ -1,0 +1,7 @@
+# crack-lab bundle patch
+#
+# Seven read-only skills for the cracking workbench. No tools, no MCP, no
+# writes outside the workspace.
+- insert:
+    - id: crack-lab
+      name: crack-lab

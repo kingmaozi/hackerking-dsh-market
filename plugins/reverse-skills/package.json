@@ -1,0 +1,45 @@
+{
+  "name": "reverse-skills",
+  "version": "0.2.2",
+  "description": "Reverse Skill 逆向/破解/渗透/CTF 技能路由包（46 skills）for DeepSeek Harness",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "skills",
+    "repo",
+    "cordis.patch.yml",
+    "README.md",
+    "NOTICE.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "selftest": "node scripts/selftest.mjs",
+    "build:skills": "python3 scripts/build-skills.py"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "reverse-engineering",
+    "security",
+    "ctf",
+    "skills"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+    "directory": "plugins/reverse-skills"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/reverse-skills"
+}

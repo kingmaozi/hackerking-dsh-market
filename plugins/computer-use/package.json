@@ -1,0 +1,43 @@
+{
+  "name": "computer-use",
+  "version": "0.1.0",
+  "description": "macOS computer-use for DeepSeek Harness：cua_* 工具（截屏/窗口枚举/点击/移动/输入/按键/滚动/拖拽），后端只用 screencapture + cliclick + osascript + pyobjc",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "NOTICE.md"
+  ],
+  "scripts": {
+    "selftest": "node scripts/selftest.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "computer-use",
+    "macos",
+    "accessibility",
+    "screenshot",
+    "desktop-automation"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+    "directory": "plugins/computer-use"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/computer-use"
+}

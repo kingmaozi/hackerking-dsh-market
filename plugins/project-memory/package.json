@@ -1,0 +1,49 @@
+{
+  "name": "project-memory",
+  "version": "0.1.0",
+  "description": "项目级记忆：按项目绝对路径哈希隔离 .dsh/memory/<slug>.md，project-memory 技能 + memory_write/memory_read/memory_status 工具 for DeepSeek Harness",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./store": "./lib/store.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "NOTICE.md"
+  ],
+  "scripts": {
+    "selftest": "node scripts/selftest.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "memory",
+    "project-memory",
+    "skills"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+    "directory": "plugins/project-memory"
+  },
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings-general"
+      ],
+      "platform": "web"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/project-memory"
+}

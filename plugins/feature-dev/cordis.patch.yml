@@ -1,0 +1,8 @@
+# feature-dev bundle patch
+#
+# Five read-only skills: the feature-dev workflow, two workflow gates
+# (PR review) and three role briefs for delegated subagents. No tools, no
+# MCP, no host hooks.
+- insert:
+    - id: feature-dev
+      name: feature-dev

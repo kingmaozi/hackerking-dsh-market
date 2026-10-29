@@ -1,0 +1,5 @@
+# Installed by `dsh plugin add dsh-artcraft-plugin-pdfcraft`.
+# One row: the plugin package that provides the PdfCraft tools.
+- insert:
+    - id: artcraft-pdfcraft
+      name: "dsh-artcraft-plugin-pdfcraft"

@@ -1,0 +1,55 @@
+{
+  "name": "agent-reach",
+  "version": "0.1.0",
+  "description": "三档全网调研（DSH 原生适配）：agent-reach-mcp 技能 + agent-reach MCP，fast / wide / deep 跨源检索、证据与缺口",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "skills",
+    "mcp",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "NOTICE.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "selftest": "node scripts/selftest.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "research",
+    "search",
+    "tavily",
+    "exa",
+    "jina",
+    "parallel",
+    "tinyfish",
+    "firecrawl",
+    "valyu",
+    "mcp",
+    "skills"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+    "directory": "plugins/agent-reach"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/agent-reach"
+}

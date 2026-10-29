@@ -1,0 +1,44 @@
+{
+  "name": "rea",
+  "version": "0.4.1",
+  "description": "REA 原生逆向分析（Skill + MCP）for DeepSeek Harness",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "skills",
+    "cordis.patch.yml",
+    "README.md",
+    "NOTICE.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "selftest": "node scripts/selftest.mjs",
+    "test:schema": "node --test scripts/schema-compat.test.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "rea",
+    "reverse-engineering",
+    "mcp",
+    "skills"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+    "directory": "plugins/rea"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/rea"
+}

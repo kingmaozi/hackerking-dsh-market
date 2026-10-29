@@ -1,0 +1,72 @@
+{
+  "name": "dsh-composer-prediction",
+  "version": "0.7.7",
+  "description": "ChatGPT-style composer predictions for DeepSeek Harness: after each assistant turn, suggest the user's next message as ghost text in the composer. Tab accepts, Escape dismisses.",
+  "type": "module",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "author": "Amir Bazylkhanov (https://github.com/Amir-Bazylkhanov)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+    "directory": "plugins/dsh-composer-prediction"
+  },
+  "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/dsh-composer-prediction",
+  "bugs": {
+    "url": "https://github.com/Amir-Bazylkhanov/dsh-composer-prediction/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "composer",
+    "prediction",
+    "ghost-text",
+    "tab-to-accept"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "files": [
+    "lib/",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "engines": {
+    "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+  },
+  "scripts": {
+    "build": "node scripts/build-client.mjs",
+    "market": "node scripts/build-market.mjs",
+    "test": "node scripts/test.mjs",
+    "check": "node scripts/build-client.mjs && node scripts/test.mjs && node --check lib/index.js && node --check lib/client.js",
+    "prepack": "npm run check"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.0",
+    "react": "^18.2.0"
+  }
+}

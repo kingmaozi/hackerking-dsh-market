@@ -1,0 +1,5 @@
+# Installed by `dsh plugin add dsh-artcraft-plugin-wordcraft`.
+# One row: the plugin package that provides the WordCraft tools.
+- insert:
+    - id: artcraft-wordcraft
+      name: "dsh-artcraft-plugin-wordcraft"

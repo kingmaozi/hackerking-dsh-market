@@ -1,0 +1,8 @@
+{
+  "upstream": "https://github.com/zhaoxuya520/reverse-skill",
+  "ref": "main",
+  "commit": "cab634bd855fc287f6e420c1f36fd1a6b9245960",
+  "version": "1.0.1",
+  "synced_at": "2026-10-19T16:25:43Z",
+  "excluded": [".git/", ".github/", "plugins/", "reverse-skill.png", "reports/"]
+}

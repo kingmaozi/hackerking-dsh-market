@@ -1,0 +1,8 @@
+# ghidra-bridge bundle patch
+#
+# Skill-only by default. The GhidraMCP server is wired separately by
+# `scripts/setup.sh`, because a missing Ghidra GUI would otherwise make every
+# boot pay a failed MCP connection.
+- insert:
+    - id: ghidra-bridge
+      name: ghidra-bridge
