@@ -5,8 +5,8 @@
     "zh": "HackerKing 逆向破解市场"
   },
   "description": {
-    "en": "DSH plugins for reverse engineering, cracking and evidence-driven delivery, plus desktop automation, research, image generation and the ArtCraft document suite. Git-source only: no registry needed.",
-    "zh": "DSH 插件市场：逆向破解技能、MCP 接线、破解工作台与证据报告，外加桌面操作、全网调研、本机生图与 ArtCraft 文档套件。纯 git 源发布，不依赖 npm registry。"
+    "en": "DSH plugins for reverse engineering, cracking and evidence-driven delivery, plus desktop automation, research, image generation and the ArtCraft document suite. Our own plugins ship as git sources; ds-bot comes from its npm release.",
+    "zh": "DSH 插件市场：逆向破解技能、MCP 接线、破解工作台与证据报告，外加桌面操作、全网调研、本机生图与 ArtCraft 文档套件。自有插件用 git 源发布，DS Bot 取 npm 发布版。"
   },
   "metadata": {
     "categories": {
@@ -32,6 +32,12 @@
         "title": {
           "en": "Productivity",
           "zh": "生产力"
+        }
+      },
+      "bot": {
+        "title": {
+          "en": "Bot Team",
+          "zh": "Bot 团队"
         }
       }
     },
@@ -94,6 +100,12 @@
         "title": {
           "en": "Tools",
           "zh": "工具"
+        }
+      },
+      "bot": {
+        "title": {
+          "en": "Bot",
+          "zh": "Bot"
         }
       }
     },
@@ -246,6 +258,61 @@
           },
           "engines": {
             "dsh": ">=0.2.1-rc.1 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ds-bot",
+      "title": {
+        "en": "DS Bot",
+        "zh": "DS Bot · 多 Bot 工作台"
+      },
+      "description": {
+        "en": "Turns DeepSeek Harness into a team of long-lived Bots: a Main Bot, Bot-to-Bot messages, group chats, a folder and memory per Bot, private Bots, scheduled work and Word/PowerPoint/Excel documents. Ships a desktop app too.",
+        "zh": "把 DSH 变成一队长期在线的 Bot：主 Bot、Bot 之间互发消息、群聊、每个 Bot 独立文件夹与记忆、私有 Bot、定时任务，以及 Word/PowerPoint/Excel 文档读写；另带独立桌面端。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiMyMmQzZWUiIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIzMiIgeTE9IjE1IiB4Mj0iMzIiIHkyPSIyMSIgc3Ryb2tlPSIjMjJkM2VlIiBzdHJva2Utd2lkdGg9IjIuNSIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMTMiIHI9IjIuNiIgZmlsbD0iIzIyZDNlZSIvPjxyZWN0IHg9IjE2IiB5PSIyNCIgd2lkdGg9IjMyIiBoZWlnaHQ9IjIzIiByeD0iNyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjJkM2VlIiBzdHJva2Utd2lkdGg9IjIuNSIvPjxjaXJjbGUgY3g9IjI1LjUiIGN5PSIzNCIgcj0iMi42IiBmaWxsPSIjMjJkM2VlIi8+PGNpcmNsZSBjeD0iMzguNSIgY3k9IjM0IiByPSIyLjYiIGZpbGw9IiMyMmQzZWUiLz48cGF0aCBkPSJNMjYgNDFoMTIiIHN0cm9rZT0iIzIyZDNlZSIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==",
+      "author": "Fei2411",
+      "homepage": "https://github.com/Fei2411/DS-Bot#readme",
+      "repository": {
+        "url": "https://github.com/Fei2411/DS-Bot",
+        "directory": "ds-bot"
+      },
+      "metadata": {
+        "category": "bot",
+        "keywords": [
+          "bot",
+          "bots",
+          "multi-agent",
+          "agent-team",
+          "group-chat",
+          "desktop-app",
+          "ds-bot"
+        ],
+        "labels": [
+          "bot"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.4",
+          "publishTimestamp": 1793287847,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.4 <0.3.0-0"
+          }
+        },
+        {
+          "version": "0.2.3",
+          "publishTimestamp": 1793110250,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.3.0-0"
           }
         }
       ]

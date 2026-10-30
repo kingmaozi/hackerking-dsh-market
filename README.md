@@ -1,6 +1,6 @@
 # HackerKing 逆向破解市场 / HackerKing Reverse Engineering Market
 
-DSH 插件市场索引（format 1），全部插件以 **git 源 + 固定 commit** 发布：不需要 npm registry，装的时候 pnpm 直接从这个仓库拉指定子目录。
+DSH 插件市场索引（format 1）。自有插件以 **git 源 + 固定 commit** 发布：不需要 npm registry，装的时候 pnpm 直接从这个仓库拉指定子目录；仓库之外的插件（目前只有 `ds-bot`）用 **npm 源**，指向其官方 npm 发布版。
 
 ## 市场地址
 
@@ -18,10 +18,17 @@ pnpm add "git+https://github.com/kingmaozi/hackerking-dsh-market.git#<commit>&pa
 
 `<commit>` 就是 `index.json` 里该版本 `source.commit` 的值，市场里点安装会自动拼好。
 
+npm 源条目（`ds-bot`）照官方发布版装，市场里点安装同样自动拼好：
+
+```bash
+pnpm add "ds-bot@<version>"
+```
+
 ## 插件清单
 
 | 插件 | 版本 | 分类 | 说明 |
 |---|---|---|---|
+| `ds-bot` | 0.2.4 / 0.2.3 | bot | DS Bot：把 DSH 变成一队长期在线的 Bot —— 主 Bot、Bot 之间互发消息、群聊、每个 Bot 独立文件夹与记忆、私有 Bot、定时任务、Word/PowerPoint/Excel 文档，另带独立桌面端。0.2.4 对齐 DSH 0.2.1-rc.4，0.2.3 对齐 rc.2–rc.3，市场按当前 DSH 版本自动挑能装的那个。 |
 | `dsh-composer-prediction` | 0.7.7 | productivity | 助手回复后在空输入框显示下一句预测；Tab 接受到草稿、Esc 关闭，含 Predictions 设置与同类插件冲突检测。 |
 | `reverse-skills` | 0.2.2 | reverse-engineering | 46 个逆向/破解/渗透/CTF/移动/固件技能，含上游路由核心与 scope 门禁。 |
 | `rea` | 0.4.1 | reverse-engineering | REA 配套 Skill + 官方 rea-agents MCP，覆盖原生、托管、Electron 与固件目标。 |
