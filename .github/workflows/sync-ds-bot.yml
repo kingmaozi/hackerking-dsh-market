@@ -1,0 +1,53 @@
+name: sync-ds-bot
+
+# 把 DS Bot（npm 包名 ds-bot）的最新发布版自动同步进市场索引。
+# 只处理这一个 npm 源条目；自有 git 源插件仍由人工按 commit 发布。
+
+on:
+  schedule:
+    - cron: '17 2 * * *' # 每天 UTC 02:17（北京 10:17）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-ds-bot
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install the DSH index validator
+        run: npm install --no-save --no-package-lock --no-audit --no-fund @deepseek-ai/dsh-plugin-market-index
+
+      - name: Validate the index as committed
+        run: node scripts/validate-index.mjs
+
+      - name: Sync ds-bot from npm
+        id: sync
+        run: node scripts/sync-ds-bot.mjs
+
+      - name: Validate the index after the sync
+        run: node scripts/validate-index.mjs
+
+      - name: Commit and push
+        if: steps.sync.outcome == 'success'
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- index.json README.md; then
+            echo "no change"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.json README.md
+          git commit -m "chore(market): 同步 ds-bot 到最新 npm 发布版"
+          git push origin HEAD:main
