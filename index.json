@@ -1151,6 +1151,55 @@
       ]
     },
     {
+      "name": "jianying-mcp",
+      "title": {
+        "en": "Jianying MCP (61 tools)",
+        "zh": "剪映 MCP（61 工具）"
+      },
+      "description": {
+        "en": "Jianying/CapCut editing through the existing Python MCP engine: 61 jy_* tools for project transactions, subtitles, member TTS, official ASR/music, local media jobs and QC, plus the jianying-edit DSH skill. Private repository: installation requires GitHub access to the repository.",
+        "zh": "把已有剪映 Python MCP 引擎接进 DSH：61 个 jy_* 工具，覆盖工程事务、字幕、会员配音、官方 ASR 与音乐、本地媒体任务与质检，附 jianying-edit 技能。仓库为私有，安装需要本机对该 GitHub 仓库有访问权限。"
+      },
+      "homepage": "https://github.com/kingmaozi/jianying-dsh-plugin",
+      "repository": {
+        "url": "https://github.com/kingmaozi/jianying-dsh-plugin.git"
+      },
+      "metadata": {
+        "category": "productivity",
+        "keywords": [
+          "jianying",
+          "capcut",
+          "video",
+          "subtitles",
+          "tts",
+          "asr",
+          "mcp",
+          "skills",
+          "dsh"
+        ],
+        "labels": [
+          "mcp",
+          "skills",
+          "media"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "1.1.0",
+          "publishTimestamp": 1793365763,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/jianying-dsh-plugin",
+            "commit": "e7e4ce8e3545a6de00944601c07e070e7f6ec0a1"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.5 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
       "name": "project-memory",
       "title": {
         "en": "Project Memory",

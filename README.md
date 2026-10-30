@@ -38,6 +38,7 @@ pnpm add "ds-bot@<version>"
 | `feature-dev` | 0.2.1 | development | 从 ZCode 移植的功能开发工作流：探索、架构、有边界实现、证据验证与独立审查，五个技能可由 subagent 分角色执行。 |
 | `imgen` | 0.1.0 | productivity | 用本机已登录的 ChatGPT / Codex 账号（OAuth）生图与改图：imgen 技能 + imgen MCP（imgen_generate / imgen_health），不要 API Key，不按张计费。 |
 | `agent-reach` | 0.1.0 | productivity | 从 ZCode 移植的三档全网调研：fast / wide / deep，走 reach_* MCP 渠道（Tavily、Exa、Jina、Parallel、TinyFish、Firecrawl、Valyu），自带证据 ID、反例与缺口说明。 |
+| `jianying-mcp` | 1.1.0 | productivity | 剪映 DSH 插件：61 个 `jy_*` 工具，覆盖工程/字幕/会员配音/官方 ASR 与音乐/本地媒体任务/质检，附 `jianying-edit` 技能。**私有仓库，安装需本机 GitHub 访问权限。** |
 | `lcu` | 0.1.0 | toolchain | 把 Codex 官方 computer-use 运行时（LCU）接成 DSH 的 MCP：js / js_reset 两个工具，App 控制按 Touch ID 批准名单放行，未批准一律 decline。 |
 | `computer-use` | 0.1.0 | toolchain | macOS 桌面操作工具：cua_* 系列（截屏、窗口枚举、点击、移动、输入、按键、滚动、拖拽），后端只用 screencapture + cliclick + osascript + pyobjc。 |
 | `dsh-artcraft-plugin-pdfcraft` | 0.1.3 | productivity | PDF 读取、编辑、抽取与整页渲染（pdfcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。 |
@@ -63,6 +64,8 @@ bash scripts/relocate.sh ~/.dsh/profiles/<profile>
 ```
 
 它把 patch 里的发布机路径改写成当前 profile 的 `node_modules/<name>/...`，并把 node 路径换成当前 `command -v node`。
+
+`jianying-mcp` 不需要 `relocate.sh`：它的 patch 用 `ctx.baseUrl` 计算 profile 内路径，不写发布机绝对路径。
 
 ## 目录
 
