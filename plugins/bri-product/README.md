@@ -7,11 +7,11 @@
 | 项 | 值 |
 | --- | --- |
 | DSH / npm 包名 | `bri-product` |
-| 插件版本 | `0.2.0`（DSH 适配版） |
+| 插件版本 | `0.2.1`（DSH 适配版） |
 | 上游插件 | `bri-product-library` `0.1.3`（briking-private） |
 | MCP `serverName` | `bri_product`（模型侧工具 `mcp__bri_product__<tool>`） |
 | 技能 | `product-library` |
-| 目标 DSH | `>=0.2.1-rc.5 <0.3.0`（`engines.dsh`） |
+| 目标 DSH | `>=0.2.1-0 <0.3.0-0`（`engines.dsh`） |
 | Node | `>=18` |
 | 许可证 | MIT（见 `LICENSE` / `NOTICE.md`） |
 

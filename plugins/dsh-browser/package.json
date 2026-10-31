@@ -1,6 +1,6 @@
 {
   "name": "dsh-browser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DSH 原生浏览器插件：11 个 browser_* MCP 工具（无头 Chrome / 可见 Chrome+扩展 / attach 已开 CDP），零 npm 依赖，直连 Chrome DevTools Protocol。",
   "type": "module",
   "main": "./index.js",
@@ -26,7 +26,7 @@
   },
   "engines": {
     "node": ">=22",
-    "dsh": ">=0.2.1-rc.5 <0.3.0"
+    "dsh": ">=0.2.1-0 <0.3.0-0"
   },
   "keywords": [
     "dsh",

@@ -1,6 +1,6 @@
 {
   "name": "playwright-browser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DSH Playwright 内核浏览器插件：12 个 browser_* MCP 工具（headless/headed/attach、截图、PDF、等待、标签页），运行依赖只有 playwright-core，默认调用系统 Google Chrome。",
   "type": "module",
   "main": "./index.js",
@@ -29,7 +29,7 @@
   },
   "engines": {
     "node": ">=22",
-    "dsh": ">=0.2.1-rc.5 <0.3.0"
+    "dsh": ">=0.2.1-0 <0.3.0-0"
   },
   "keywords": [
     "dsh",

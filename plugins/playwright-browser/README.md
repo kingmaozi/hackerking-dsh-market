@@ -5,12 +5,12 @@
 | 项 | 值 |
 | --- | --- |
 | 包名 | `playwright-browser` |
-| 版本 | `0.1.0` |
+| 版本 | `0.1.1` |
 | MCP `serverName` | `playwright`（模型侧 `mcp__playwright__browser_*`） |
 | 技能 | `playwright-browser` |
 | 运行依赖 | `playwright-core@1.64.1`（唯一依赖；无 peerDependencies / devDependencies） |
 | 浏览器 | 系统 Google Chrome（默认 `channel: 'chrome'`）；可用 `PLAYWRIGHT_CHROME_PATH` 指向其他 Chrome/Chromium |
-| 目标 DSH | `>=0.2.1-rc.5 <0.3.0` |
+| 目标 DSH | `>=0.2.1-0 <0.3.0-0` |
 | Node | `>=22` |
 | 许可证 | MIT |
 

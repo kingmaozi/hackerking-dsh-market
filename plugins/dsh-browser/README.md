@@ -5,10 +5,10 @@
 | 项 | 值 |
 | --- | --- |
 | 包名 | `dsh-browser` |
-| 版本 | `0.1.0` |
+| 版本 | `0.1.1` |
 | MCP `serverName` | `browser`（模型侧 `mcp__browser__browser_*`） |
 | 技能 | `browser-automation` |
-| 目标 DSH | `>=0.2.1-rc.5 <0.3.0`（`engines.dsh`） |
+| 目标 DSH | `>=0.2.1-0 <0.3.0-0`（`engines.dsh`） |
 | Node | `>=22`（依赖全局 WebSocket；实测 v26.12.1 / DSH runtime 24） |
 | 浏览器 | Google Chrome / Chromium / Edge / Chrome for Testing（自动发现） |
 | 依赖 | **0 个 npm 依赖** |

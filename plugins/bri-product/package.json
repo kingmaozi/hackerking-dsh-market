@@ -1,6 +1,6 @@
 {
   "name": "bri-product",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "brking.ai 产品库 DSH 插件：13 个 product_* MCP 工具（搜索/取图/对比/图片审计/做图上下文/按需缓存）+ product-library 技能；本地只存元数据与图床 URL。",
   "type": "module",
   "main": "./index.js",
@@ -40,7 +40,7 @@
   },
   "engines": {
     "node": ">=18",
-    "dsh": ">=0.2.1-rc.5 <0.3.0"
+    "dsh": ">=0.2.1-0 <0.3.0-0"
   },
   "keywords": [
     "dsh",
