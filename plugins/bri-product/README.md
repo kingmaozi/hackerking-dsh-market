@@ -32,9 +32,9 @@
 
 ### 3.1 DSH Desktop（推荐）
 
-1. 构建 tarball：在**工作区根目录**执行 `python3 scripts/build_package.py`，产物在 `release/bri-product-0.2.0.tgz`。
+1. 构建 tarball：在**工作区根目录**执行 `python3 scripts/build_package.py`，产物在 `release/bri-product-0.2.1.tgz`。
 2. 打开 DSH → 侧栏 **插件 → 添加插件 → 安装第三方插件**。
-3. 填入 tarball 绝对路径（例如 `/Users/zhangsugang/Documents/爆款商品工作区/release/bri-product-0.2.0.tgz`），确认安装并启用。
+3. 填入 tarball 绝对路径（例如 `/Users/zhangsugang/Documents/爆款商品工作区/release/bri-product-0.2.1.tgz`），确认安装并启用。
 4. 重启 DSH（或按提示重启）。新会话里应出现 `mcp__bri_product__*` 工具和 `product-library` 技能。
 
 > Desktop profile 由 Electron 应用独占管理，`dsh plugin --profile desktop` 会被拒绝；请走插件界面。
@@ -44,7 +44,7 @@
 ```sh
 DSH="/Applications/DeepSeek Harness.app/Contents/Resources/runtime/cli/bin/dsh"
 DSH_HOME=/tmp/dsh-bri-probe "$DSH" --profile bri-probe --from-default-profile headless --dump-config
-DSH_HOME=/tmp/dsh-bri-probe "$DSH" plugin --profile bri-probe add /absolute/path/bri-product-0.2.0.tgz
+DSH_HOME=/tmp/dsh-bri-probe "$DSH" plugin --profile bri-probe add /absolute/path/bri-product-0.2.1.tgz
 ```
 
 安装后重启该 profile；`--dump-config` 只证明组合里有行，真实加载以工具注册和技能可见为准。

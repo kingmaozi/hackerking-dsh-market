@@ -65,7 +65,7 @@
 ```sh
 # 工作区根目录
 python3 scripts/build_playwright_package.py
-# → release/playwright-browser-0.1.0.tgz + .sha256 + playwright-browser-0.1.0.manifest.json
+# → release/playwright-browser-0.1.1.tgz + .sha256 + playwright-browser-0.1.1.manifest.json
 ```
 
 DSH Desktop：侧栏 **插件 → 添加插件 → 安装第三方插件**，填 tarball 绝对路径，安装并启用，重启 DSH。安装时宿主会用 pnpm 从 npm 拉取 `playwright-core@1.64.1`（无 build script，不会触发浏览器下载）。新会话里应出现 `mcp__playwright__*` 工具与 `playwright-browser` 技能。
@@ -74,7 +74,7 @@ DSH Desktop：侧栏 **插件 → 添加插件 → 安装第三方插件**，填
 
 ```sh
 DSH="/Applications/DeepSeek Harness.app/Contents/Resources/runtime/cli/bin/dsh"
-DSH_HOME=/tmp/dsh-playwright-test "$DSH" plugin --profile headless add /绝对路径/release/playwright-browser-0.1.0.tgz
+DSH_HOME=/tmp/dsh-playwright-test "$DSH" plugin --profile headless add /绝对路径/release/playwright-browser-0.1.1.tgz
 ```
 
 ## 5. 环境变量
@@ -148,4 +148,4 @@ playwright-plugin/
   tests/        core.test.mjs、mcp.test.mjs、live.test.mjs
 ```
 
-构建：工作区根目录 `scripts/build_playwright_package.py` → `release/playwright-browser-0.1.0.tgz`（确定性 tar：`mtime=0`、`uid/gid=0`、按 `files` 白名单，不打包 `node_modules`）。
+构建：工作区根目录 `scripts/build_playwright_package.py` → `release/playwright-browser-0.1.1.tgz`（确定性 tar：`mtime=0`、`uid/gid=0`、按 `files` 白名单，不打包 `node_modules`）。

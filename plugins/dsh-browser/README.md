@@ -63,7 +63,7 @@
 ```sh
 # 工作区根目录
 python3 scripts/build_browser_package.py
-# → release/dsh-browser-0.1.0.tgz + .sha256 + dsh-browser-0.1.0.manifest.json
+# → release/dsh-browser-0.1.1.tgz + .sha256 + dsh-browser-0.1.1.manifest.json
 ```
 
 DSH Desktop：侧栏 **插件 → 添加插件 → 安装第三方插件**，填 tarball 绝对路径，安装并启用，重启 DSH。新会话里应出现 `mcp__browser__*` 工具与 `browser-automation` 技能。
@@ -73,7 +73,7 @@ DSH Desktop：侧栏 **插件 → 添加插件 → 安装第三方插件**，填
 ```sh
 DSH="/Applications/DeepSeek Harness.app/Contents/Resources/runtime/cli/bin/dsh"
 DSH_HOME=/tmp/dsh-browser-probe "$DSH" --profile browser-probe --from-default-profile headless
-DSH_HOME=/tmp/dsh-browser-probe "$DSH" plugin --profile browser-probe add /绝对路径/release/dsh-browser-0.1.0.tgz
+DSH_HOME=/tmp/dsh-browser-probe "$DSH" plugin --profile browser-probe add /绝对路径/release/dsh-browser-0.1.1.tgz
 ```
 
 ## 5. 环境变量
@@ -148,4 +148,4 @@ browser-plugin/
   tests/        core.test.mjs、mcp.test.mjs、live.test.mjs
 ```
 
-构建：工作区根目录 `scripts/build_browser_package.py` → `release/dsh-browser-0.1.0.tgz`（确定性 tar：mtime=0、uid/gid=0、按 `files` 白名单）。
+构建：工作区根目录 `scripts/build_browser_package.py` → `release/dsh-browser-0.1.1.tgz`（确定性 tar：mtime=0、uid/gid=0、按 `files` 白名单）。
