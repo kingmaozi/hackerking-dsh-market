@@ -57,6 +57,8 @@ pnpm add "ds-bot@<version>"
 
 | `bri-product` | 0.2.0 | ecommerce | brking.ai 产品库 DSH 插件：13 个 product_* MCP 工具（搜索、取图、对比、图片审计、做图上下文、按需缓存、同步）+ product-library 技能；只存元数据与图床 URL，可直接给主图/详情页/小红书做图提供参考图。 |
 
+| `dsh-browser` | 0.1.0 | browser | DSH 原生浏览器插件：11 个 browser_* MCP 工具，零 npm 依赖，直连 Chrome DevTools Protocol；支持无头 Chrome、可见 Chrome（可加载 unpacked 扩展、复用持久 profile）与 attach 已有调试端口；含 browser-automation 技能。 |
+
 ## 安装后处理（MCP 类插件）
 
 带 MCP 的插件（`lcu` / `imgen` / `agent-reach` / `rea` / `ghidra-bridge`）在 `cordis.patch.yml` 里记录了**发布机上的绝对路径**。换机器安装后跑一次：

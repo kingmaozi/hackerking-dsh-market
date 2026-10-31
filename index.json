@@ -1459,6 +1459,59 @@
           }
         }
       ]
+    },
+    {
+      "name": "dsh-browser",
+      "title": {
+        "en": "Browser (headless Chrome + CDP)",
+        "zh": "浏览器（无头 Chrome / 扩展）dsh-browser"
+      },
+      "description": {
+        "en": "Native DSH browser plugin: 11 browser_* MCP tools over the Chrome DevTools Protocol, zero npm dependencies. Headless Chrome, a visible Chrome profile with unpacked extensions, or attach to an existing CDP endpoint; includes the browser-automation skill.",
+        "zh": "DSH 原生浏览器插件：11 个 browser_* MCP 工具，零 npm 依赖，直连 Chrome DevTools Protocol；支持无头 Chrome、可见 Chrome（可加载 unpacked 扩展、复用持久 profile）与 attach 已有调试端口；含 browser-automation 技能。"
+      },
+      "author": "kingmaozi",
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiMyMmQzZWUiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzIyZDNlZSI+V0I8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/dsh-browser",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/dsh-browser"
+      },
+      "metadata": {
+        "category": "browser",
+        "keywords": [
+          "browser",
+          "headless",
+          "chrome",
+          "cdp",
+          "devtools",
+          "automation",
+          "extensions",
+          "mcp",
+          "skills"
+        ],
+        "labels": [
+          "skills",
+          "mcp",
+          "browser"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1793446138,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "c8ccf67300f674ba0ff0d040d5cc440f7fb80b8c",
+            "path": "plugins/dsh-browser"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.5 <0.3.0"
+          }
+        }
+      ]
     }
   ]
 }
