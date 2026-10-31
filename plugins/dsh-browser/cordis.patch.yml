@@ -1,0 +1,41 @@
+# dsh-browser bundle patch (DSH plugin 0.1.0)
+#
+# Two rows:
+#   1. dsh-browser      — the bundled `browser-automation` skill provider (read-only).
+#   2. mcp-browser      — the stdio MCP client that starts the zero-dependency CDP server.
+#
+# The MCP row resolves the installed package through the profile baseUrl, so no
+# machine path is hard-coded (same pattern as the DSH host contract: bundle
+# patches are evaluated with `ctx.baseUrl` = the profile directory, and installed
+# packages live under `<profile>/node_modules`). `decodeURIComponent(...pathname)`
+# is required because URL path names percent-encode spaces and non-ASCII chars.
+#
+# Runtime state lives in `~/.dsh/browser/` (shots/, chrome-profile/). Every
+# setting has an env override; see README section 5. Default mode is `headless`
+# (temporary profile, never touches the user's daily Chrome profile).
+- insert:
+    - id: dsh-browser
+      name: dsh-browser
+
+    - id: mcp-browser
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: browser
+        transport: stdio
+        command: /bin/sh
+        args:
+          - !!js "decodeURIComponent(new URL('node_modules/dsh-browser/mcp/launch.sh', ctx.baseUrl).pathname)"
+        env:
+          PATH: /opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+          # Optional settings (uncomment in the installed bundle or set in the
+          # DSH mcp-browser env block):
+          # BROWSER_MODE: headless            # headless | chrome | attach
+          # BROWSER_CHROME_PATH: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+          # BROWSER_PROFILE_DIR: /Users/you/.dsh/browser/chrome-profile
+          # BROWSER_EXTENSIONS: /path/to/ext1:/path/to/ext2   # chrome mode only
+          # BROWSER_ATTACH_PORT: "9222"       # attach mode only
+        toolCallTimeoutMs: 300000
+        failOnStartupError: false
+        reconnect:
+          enabled: true
+          maxAttempts: 3

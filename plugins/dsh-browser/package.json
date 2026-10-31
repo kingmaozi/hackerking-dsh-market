@@ -1,0 +1,55 @@
+{
+  "name": "dsh-browser",
+  "version": "0.1.0",
+  "description": "DSH 原生浏览器插件：11 个 browser_* MCP 工具（无头 Chrome / 可见 Chrome+扩展 / attach 已开 CDP），零 npm 依赖，直连 Chrome DevTools Protocol。",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "mcp",
+    "skills",
+    "scripts/selftest.mjs",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "selftest": "node scripts/selftest.mjs",
+    "selftest:live": "node scripts/selftest.mjs --live",
+    "mcp": "node mcp/server.mjs"
+  },
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.1-rc.5 <0.3.0"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "browser",
+    "headless",
+    "chrome",
+    "cdp",
+    "devtools-protocol",
+    "automation",
+    "mcp"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+    "directory": "plugins/dsh-browser"
+  },
+  "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/dsh-browser"
+}
