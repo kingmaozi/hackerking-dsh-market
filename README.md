@@ -59,6 +59,8 @@ pnpm add "ds-bot@<version>"
 
 | `dsh-browser` | 0.1.0 | browser | DSH 原生浏览器插件：11 个 browser_* MCP 工具，零 npm 依赖，直连 Chrome DevTools Protocol；支持无头 Chrome、可见 Chrome（可加载 unpacked 扩展、复用持久 profile）与 attach 已有调试端口；含 browser-automation 技能。 |
 
+| `playwright-browser` | 0.1.0 | browser | DSH 的 Playwright 内核浏览器插件：12 个 browser_* MCP 工具（无头 / 有头 / attach、截图、PDF、等待、标签页）。唯一依赖 playwright-core，默认调用系统 Google Chrome，不下载 Chromium。 |
+
 ## 安装后处理（MCP 类插件）
 
 带 MCP 的插件（`lcu` / `imgen` / `agent-reach` / `rea` / `ghidra-bridge`）在 `cordis.patch.yml` 里记录了**发布机上的绝对路径**。换机器安装后跑一次：

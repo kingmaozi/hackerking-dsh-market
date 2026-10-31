@@ -1512,6 +1512,58 @@
           }
         }
       ]
+    },
+    {
+      "name": "playwright-browser",
+      "title": {
+        "en": "Playwright Browser (headless)",
+        "zh": "Playwright 无头浏览器 playwright-browser"
+      },
+      "description": {
+        "en": "Playwright-core browser plugin for DSH: 12 browser_* MCP tools (headless / headed / attach, screenshot, PDF, wait, tabs). Only dependency is playwright-core; launches the system Google Chrome, no bundled Chromium download.",
+        "zh": "DSH 的 Playwright 内核浏览器插件：12 个 browser_* MCP 工具（无头 / 有头 / attach、截图、PDF、等待、标签页）。唯一依赖 playwright-core，默认调用系统 Google Chrome，不下载 Chromium。"
+      },
+      "author": "kingmaozi",
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiNhNzhiZmEiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzIiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLFNGTW9uby1SZWd1bGFyLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2E3OGJmYSI+UFc8L3RleHQ+PC9zdmc+",
+      "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/playwright-browser",
+      "repository": {
+        "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+        "directory": "plugins/playwright-browser"
+      },
+      "metadata": {
+        "category": "browser",
+        "keywords": [
+          "playwright",
+          "browser",
+          "headless",
+          "chrome",
+          "pdf",
+          "automation",
+          "mcp",
+          "skills"
+        ],
+        "labels": [
+          "skills",
+          "mcp",
+          "browser"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1793448365,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kingmaozi/hackerking-dsh-market",
+            "commit": "165a0792a3995811cec412b5dfb9eb5414e9ad87",
+            "path": "plugins/playwright-browser"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.5 <0.3.0"
+          }
+        }
+      ]
     }
   ]
 }
