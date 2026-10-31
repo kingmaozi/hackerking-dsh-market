@@ -1447,11 +1447,11 @@
       "versions": [
         {
           "version": "0.2.1",
-          "publishTimestamp": 1793448991,
+          "publishTimestamp": 1793449173,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
-            "commit": "77473cbc1a7060af8a94ff673732843472c4f8fa",
+            "commit": "8c8e865c256ca15c5307064a4b5d740f4cc683b3",
             "path": "plugins/bri-product"
           },
           "engines": {
@@ -1500,11 +1500,11 @@
       "versions": [
         {
           "version": "0.1.1",
-          "publishTimestamp": 1793448991,
+          "publishTimestamp": 1793449173,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
-            "commit": "77473cbc1a7060af8a94ff673732843472c4f8fa",
+            "commit": "8c8e865c256ca15c5307064a4b5d740f4cc683b3",
             "path": "plugins/dsh-browser"
           },
           "engines": {
@@ -1552,11 +1552,11 @@
       "versions": [
         {
           "version": "0.1.1",
-          "publishTimestamp": 1793448991,
+          "publishTimestamp": 1793449173,
           "source": {
             "type": "git",
             "url": "https://github.com/kingmaozi/hackerking-dsh-market",
-            "commit": "77473cbc1a7060af8a94ff673732843472c4f8fa",
+            "commit": "8c8e865c256ca15c5307064a4b5d740f4cc683b3",
             "path": "plugins/playwright-browser"
           },
           "engines": {
