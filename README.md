@@ -55,6 +55,8 @@ pnpm add "ds-bot@<version>"
 | `dsh-artcraft-plugin-lightcraft` | 0.1.3 | productivity | 照片库与 RAW 显影：目录、评级、显影参数（lightcraft-cli），由 DSH 插件无头驱动：命令目录、执行、检查、转换与自带 MCP 服务器。 |
 | `@a9i5k4/dsh-auto-memory` | 3.3.17 | development | 跨会话自动记忆：每个工作区一份 <cwd>/.dsh/memory/MEMORY.md + 全局层，自动召回跨会话生效；带完整设置面板（回顾、引导、皮肤）。关键词/BM25 检索开箱即用，语义检索是可选 Python 引擎。 |
 
+| `bri-product` | 0.2.0 | ecommerce | brking.ai 产品库 DSH 插件：13 个 product_* MCP 工具（搜索、取图、对比、图片审计、做图上下文、按需缓存、同步）+ product-library 技能；只存元数据与图床 URL，可直接给主图/详情页/小红书做图提供参考图。 |
+
 ## 安装后处理（MCP 类插件）
 
 带 MCP 的插件（`lcu` / `imgen` / `agent-reach` / `rea` / `ghidra-bridge`）在 `cordis.patch.yml` 里记录了**发布机上的绝对路径**。换机器安装后跑一次：
