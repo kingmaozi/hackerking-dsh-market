@@ -1,0 +1,41 @@
+# playwright-browser bundle patch (DSH plugin 0.1.0)
+#
+# Two rows:
+#   1. playwright-browser  — the bundled `playwright-browser` skill provider (read-only).
+#   2. mcp-playwright      — the stdio MCP client that starts the Playwright-core server.
+#
+# The MCP row resolves the installed package through the profile baseUrl, so no
+# machine path is hard-coded (same pattern as the DSH host contract: bundle
+# patches are evaluated with `ctx.baseUrl` = the profile directory, and installed
+# packages live under `<profile>/node_modules`). `decodeURIComponent(...pathname)`
+# is required because URL path names percent-encode spaces and non-ASCII chars.
+#
+# Runtime state lives in `~/.dsh/playwright-browser/` (shots/, profile/ for
+# headed mode). Every setting has an env override; see README section 5.
+# Default: headless Chromium via the system Google Chrome (`channel: 'chrome'`),
+# so playwright-core never downloads its own browser build.
+- insert:
+    - id: playwright-browser
+      name: playwright-browser
+
+    - id: mcp-playwright
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: playwright
+        transport: stdio
+        command: /bin/sh
+        args:
+          - !!js "decodeURIComponent(new URL('node_modules/playwright-browser/mcp/launch.sh', ctx.baseUrl).pathname)"
+        env:
+          PATH: /opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+          # Optional settings (uncomment in the installed bundle or set in the
+          # DSH mcp-playwright env block):
+          # PLAYWRIGHT_CHROME_PATH: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+          # PLAYWRIGHT_HEADLESS: "1"            # 1 = headless, 0 = headed
+          # PLAYWRIGHT_PROFILE_DIR: /Users/you/.dsh/playwright-browser/profile
+          # PLAYWRIGHT_ATTACH_PORT: "9222"      # attach mode only
+        toolCallTimeoutMs: 300000
+        failOnStartupError: false
+        reconnect:
+          enabled: true
+          maxAttempts: 3

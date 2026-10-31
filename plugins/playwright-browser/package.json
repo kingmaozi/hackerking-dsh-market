@@ -1,0 +1,58 @@
+{
+  "name": "playwright-browser",
+  "version": "0.1.0",
+  "description": "DSH Playwright 内核浏览器插件：12 个 browser_* MCP 工具（headless/headed/attach、截图、PDF、等待、标签页），运行依赖只有 playwright-core，默认调用系统 Google Chrome。",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "mcp",
+    "skills",
+    "scripts/selftest.mjs",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "selftest": "node scripts/selftest.mjs",
+    "selftest:live": "node scripts/selftest.mjs --live",
+    "mcp": "node mcp/server.mjs"
+  },
+  "dependencies": {
+    "playwright-core": "1.64.1"
+  },
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.1-rc.5 <0.3.0"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "playwright",
+    "browser",
+    "headless",
+    "chrome",
+    "pdf",
+    "automation",
+    "mcp"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kingmaozi/hackerking-dsh-market.git",
+    "directory": "plugins/playwright-browser"
+  },
+  "homepage": "https://github.com/kingmaozi/hackerking-dsh-market/tree/main/plugins/playwright-browser"
+}
