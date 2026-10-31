@@ -1,0 +1,36 @@
+# bri-product bundle patch (DSH plugin 0.2.0)
+#
+# Two rows:
+#   1. bri-product      — the bundled `product-library` skill provider (read-only).
+#   2. mcp-bri-product  — the stdio MCP client that starts the product-catalog server.
+#
+# The MCP row resolves the installed package through the profile baseUrl, so no
+# machine path is hard-coded (same pattern as the DSH host contract: bundle
+# patches are evaluated with `ctx.baseUrl` = the profile directory, and installed
+# packages live under `<profile>/node_modules`). `decodeURIComponent(...pathname)`
+# is required because URL path names percent-encode spaces and non-ASCII chars.
+#
+# Data lives in `~/.bri-product-library` (index.json + cache/). Override it with
+# BRI_PRODUCT_LIBRARY_HOME below (one dir per operator is recommended).
+# Network egress is allow-listed inside the server: ai.bri-king.com,
+# *.bri-king.com, *.myqcloud.com, 127.0.0.1, localhost. Extend only when needed
+# via BRI_PRODUCT_LIBRARY_ALLOWED_HOSTS.
+- insert:
+    - id: bri-product
+      name: bri-product
+
+    - id: mcp-bri-product
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: bri_product
+        transport: stdio
+        command: /bin/sh
+        args:
+          - !!js "decodeURIComponent(new URL('node_modules/bri-product/mcp/launch.sh', ctx.baseUrl).pathname)"
+        env:
+          PATH: /opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+        toolCallTimeoutMs: 300000
+        failOnStartupError: false
+        reconnect:
+          enabled: true
+          maxAttempts: 3
