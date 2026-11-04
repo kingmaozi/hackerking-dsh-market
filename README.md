@@ -28,7 +28,7 @@ pnpm add "ds-bot@<version>"
 
 | 插件 | 版本 | 分类 | 说明 |
 |---|---|---|---|
-| `ds-bot` | 0.2.6 / 0.2.5 / 0.2.4 | bot | DS Bot：把 DSH 变成一队长期在线的 Bot —— 主 Bot、Bot 之间互发消息、群聊、每个 Bot 独立文件夹与记忆、私有 Bot、定时任务、Word/PowerPoint/Excel 文档，另带独立桌面端。0.2.4 对齐 DSH 0.2.1-rc.4，0.2.3 对齐 rc.2–rc.3，市场按当前 DSH 版本自动挑能装的那个。 |
+| `ds-bot` | 0.2.7 / 0.2.6 / 0.2.5 | bot | DS Bot：把 DSH 变成一队长期在线的 Bot —— 主 Bot、Bot 之间互发消息、群聊、每个 Bot 独立文件夹与记忆、私有 Bot、定时任务、Word/PowerPoint/Excel 文档，另带独立桌面端。0.2.4 对齐 DSH 0.2.1-rc.4，0.2.3 对齐 rc.2–rc.3，市场按当前 DSH 版本自动挑能装的那个。 |
 | `dsh-composer-prediction` | 0.7.7 | productivity | 助手回复后在空输入框显示下一句预测；Tab 接受到草稿、Esc 关闭，含 Predictions 设置与同类插件冲突检测。 |
 | `reverse-skills` | 0.2.2 | reverse-engineering | 46 个逆向/破解/渗透/CTF/移动/固件技能，含上游路由核心与 scope 门禁。 |
 | `rea` | 0.4.1 | reverse-engineering | REA 配套 Skill + 官方 rea-agents MCP，覆盖原生、托管、Electron 与固件目标。 |
