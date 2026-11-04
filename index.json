@@ -51,6 +51,12 @@
           "en": "Browser",
           "zh": "浏览器"
         }
+      },
+      "agent": {
+        "title": {
+          "en": "Agent",
+          "zh": "智能体"
+        }
       }
     },
     "labels": {
@@ -130,6 +136,12 @@
         "title": {
           "en": "Browser",
           "zh": "浏览器"
+        }
+      },
+      "agent": {
+        "title": {
+          "en": "Agent",
+          "zh": "智能体"
         }
       }
     },
@@ -1572,6 +1584,88 @@
           "engines": {
             "dsh": ">=0.2.1-0 <0.3.0-0"
           }
+        }
+      ]
+    },
+    {
+      "name": "dsh-superagent-panel",
+      "title": {
+        "en": "Superagent Panel for DSH",
+        "zh": "Superagent 面板（桌面端入口）"
+      },
+      "description": {
+        "en": "Adds a Superagent entry to the DSH sidebar and embeds the dsh-superagent management panel in a same-origin iframe, because DSH NEXT runs on dsh-app:// and Chromium silently refuses to embed http://127.0.0.1:3082. Also starts, stops and restarts the service from the toolbar.",
+        "zh": "在 DSH 侧栏加一个 Superagent 入口，用同源反向代理把 dsh-superagent 的管理面板嵌进同一个窗口 —— DSH NEXT 跑在 dsh-app:// 下，Chromium 会静默拒绝嵌入 http://127.0.0.1:3082。工具条还能启停、重启服务。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjEwIiB5PSIxMyIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjM4IiByeD0iNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjJkM2VlIiBzdHJva2Utd2lkdGg9IjIuNSIvPjxsaW5lIHgxPSIxMCIgeTE9IjIzIiB4Mj0iNTQiIHkyPSIyMyIgc3Ryb2tlPSIjMjJkM2VlIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9Ii43Ii8+PGNpcmNsZSBjeD0iMTYiIGN5PSIxOCIgcj0iMS42IiBmaWxsPSIjMjJkM2VlIi8+PGNpcmNsZSBjeD0iMjEiIGN5PSIxOCIgcj0iMS42IiBmaWxsPSIjMjJkM2VlIiBvcGFjaXR5PSIuNiIvPjxyZWN0IHg9IjE0IiB5PSIyOCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjMiIHJ4PSIxLjUiIGZpbGw9IiMyMmQzZWUiLz48cmVjdCB4PSIxNCIgeT0iMzQiIHdpZHRoPSIxMCIgaGVpZ2h0PSIzIiByeD0iMS41IiBmaWxsPSIjMjJkM2VlIiBvcGFjaXR5PSIuNDUiLz48cmVjdCB4PSIyOCIgeT0iMjgiIHdpZHRoPSIyMiIgaGVpZ2h0PSIxOSIgcng9IjMiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIyZDNlZSIgc3Ryb2tlLXdpZHRoPSIxLjgiIG9wYWNpdHk9Ii44NSIvPjwvc3ZnPg==",
+      "author": "deepseekv41flash",
+      "homepage": "https://github.com/deepseekv41flash/dsh-superagent-panel#readme",
+      "repository": {
+        "url": "https://github.com/deepseekv41flash/dsh-superagent-panel"
+      },
+      "metadata": {
+        "category": "agent",
+        "keywords": [
+          "superagent",
+          "panel",
+          "dashboard",
+          "iframe",
+          "same-origin-proxy",
+          "supervision"
+        ],
+        "labels": [
+          "agent",
+          "desktop"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.2",
+          "publishTimestamp": 1793522809,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        }
+      ]
+    },
+    {
+      "name": "dsh-superagent-bridge",
+      "title": {
+        "en": "Superagent Bridge",
+        "zh": "Superagent 服务侧桥接"
+      },
+      "description": {
+        "en": "Installed on the profile that runs dsh-superagent: serves the Superagent management panel as a standalone page over plain HTTP, which is what the panel plugin needs because an embedded iframe cannot use the DSH event stream.",
+        "zh": "装在跑 dsh-superagent 的那个 profile 里：把 Superagent 管理面板输出成独立 HTTP 页面。没有它，面板插件的 iframe 里没有页面可显示。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBiMTIyMCIvPjxjaXJjbGUgY3g9IjE1IiBjeT0iMzIiIHI9IjciIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIyZDNlZSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48Y2lyY2xlIGN4PSI0OSIgY3k9IjMyIiByPSI3IiBmaWxsPSJub25lIiBzdHJva2U9IiMyMmQzZWUiIHN0cm9rZS13aWR0aD0iMi41Ii8+PGxpbmUgeDE9IjIyIiB5MT0iMzIiIHgyPSI0MiIgeTI9IjMyIiBzdHJva2U9IiMyMmQzZWUiIHN0cm9rZS13aWR0aD0iMi41Ii8+PGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMy4yIiBmaWxsPSIjMjJkM2VlIi8+PC9zdmc+",
+      "author": "deepseekv41flash",
+      "homepage": "https://github.com/deepseekv41flash/dsh-superagent-bridge#readme",
+      "repository": {
+        "url": "https://github.com/deepseekv41flash/dsh-superagent-bridge"
+      },
+      "metadata": {
+        "category": "agent",
+        "keywords": [
+          "superagent",
+          "bridge",
+          "panel",
+          "http"
+        ],
+        "labels": [
+          "agent",
+          "setup"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.1",
+          "publishTimestamp": 1793514935,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
         }
       ]
     }

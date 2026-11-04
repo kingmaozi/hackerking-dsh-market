@@ -61,6 +61,9 @@ pnpm add "ds-bot@<version>"
 
 | `playwright-browser` | 0.1.1 | browser | DSH 的 Playwright 内核浏览器插件：12 个 browser_* MCP 工具（无头 / 有头 / attach、截图、PDF、等待、标签页）。唯一依赖 playwright-core，默认调用系统 Google Chrome，不下载 Chromium。 |
 
+| `dsh-superagent-panel` | 0.2.2 | agent | 桌面端 Superagent 入口：侧栏加图标，用同源反向代理把 dsh-superagent 的管理面板 iframe 嵌进 DSH NEXT（`dsh-app://` 下 Chromium 会静默拒绝直接嵌 `127.0.0.1:3082`）。工具条可启停/重启服务。**装在桌面端 profile 里。** |
+| `dsh-superagent-bridge` | 0.1.1 | agent | 服务侧桥接：装在跑 `dsh-superagent` 的那个 profile，把管理面板输出成独立 HTTP 页面，供上面的 iframe 加载。没有它面板是空的。**装在 superagent profile 里。** |
+
 ## 安装后处理（MCP 类插件）
 
 带 MCP 的插件（`lcu` / `imgen` / `agent-reach` / `rea` / `ghidra-bridge`）在 `cordis.patch.yml` 里记录了**发布机上的绝对路径**。换机器安装后跑一次：
